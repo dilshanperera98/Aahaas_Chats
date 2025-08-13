@@ -1,1 +1,1 @@
-update set wher
+update set wh
