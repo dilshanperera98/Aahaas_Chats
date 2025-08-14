@@ -1,1 +1,1 @@
-rthtyjnytn hynh. htnh hasa
+rthtyjnytn hynh. htnh
