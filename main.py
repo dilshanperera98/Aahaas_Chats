@@ -1,1 +1,1 @@
-rthtyjnytn hynh. htnh
+rthtyjnytn hynh
