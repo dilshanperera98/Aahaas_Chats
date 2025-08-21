@@ -1,1 +1,1 @@
-gbtgbt bbgt tg ttg
+gbtgbt bbgt tg 
