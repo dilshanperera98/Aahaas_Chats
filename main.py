@@ -1,1 +1,1 @@
-update set where inneer j
+update set where inneer 
