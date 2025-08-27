@@ -1,1 +1,1 @@
-update set where i
+update set wher
