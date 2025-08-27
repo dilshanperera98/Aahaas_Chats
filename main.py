@@ -1,1 +1,1 @@
-update set where inneer join 
+update set where inneer joi
