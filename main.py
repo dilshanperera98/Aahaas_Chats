@@ -1,1 +1,1 @@
-update zet 
+update z
