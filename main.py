@@ -1,1 +1,1 @@
-update zet w
+update zet 
