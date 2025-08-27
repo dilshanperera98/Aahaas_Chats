@@ -1,1 +1,1 @@
-update set wh
+update set w
