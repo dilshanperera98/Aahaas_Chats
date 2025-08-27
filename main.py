@@ -1,1 +1,1 @@
-update zet wher
+update zet w
