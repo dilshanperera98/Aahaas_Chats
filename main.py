@@ -1,1 +1,1 @@
-iupdate set wh
+iupdate set w
