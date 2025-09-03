@@ -1,1 +1,1 @@
-update set wherd
+update set whe
