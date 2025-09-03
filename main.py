@@ -1,1 +1,1 @@
-update set where innwer join 
+update set where innwer jois 
