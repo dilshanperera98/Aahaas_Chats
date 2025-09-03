@@ -1,1 +1,1 @@
-update set wheref
+update set wherd
