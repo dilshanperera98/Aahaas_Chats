@@ -1,1 +1,1 @@
-pip install update inner jo
+pip install update inner j
