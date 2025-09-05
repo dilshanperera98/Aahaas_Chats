@@ -1,1 +1,1 @@
-update sey hwre e ,inner join thegt
+update sey hwre e ,inner join theg
