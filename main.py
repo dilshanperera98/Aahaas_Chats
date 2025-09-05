@@ -1,0 +1,1 @@
+update sey hwre e ,inner join thegteb
