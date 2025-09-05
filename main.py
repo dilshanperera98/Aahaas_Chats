@@ -1,1 +1,1 @@
-pip install up
+pip install u
