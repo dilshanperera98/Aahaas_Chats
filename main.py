@@ -1,1 +1,1 @@
-pip install update 
+pip install updat
