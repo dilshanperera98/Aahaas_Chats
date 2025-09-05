@@ -1,1 +1,1 @@
-update sey hwre e ,inner join 
+update sey hwre e ,inner
