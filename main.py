@@ -1,1 +1,1 @@
-update sey hwre e ,inner
+update sey hwre e ,i
