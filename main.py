@@ -1,1 +1,1 @@
-pip in
+pip i
