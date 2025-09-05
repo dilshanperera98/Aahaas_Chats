@@ -1,1 +1,1 @@
-pip insta
+pip inst
