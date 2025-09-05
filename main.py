@@ -1,1 +1,1 @@
-pip instal
+pip insta
