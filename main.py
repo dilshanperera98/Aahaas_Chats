@@ -1,1 +1,1 @@
-pip install upd
+pip install up
