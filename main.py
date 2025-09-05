@@ -1,1 +1,1 @@
-pip install update inner joi
+pip install update inner jo
