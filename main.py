@@ -1,1 +1,1 @@
-pip install update inn
+pip install update in
