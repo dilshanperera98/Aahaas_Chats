@@ -121,3 +121,6 @@ else:
     print("2. Verify your Firebase credentials have read access")
     print("3. Check if customer collections exist under the 'chats' document")
     print("4. Verify message documents contain 'role', 'text', and 'createdAt' fields")
+
+
+
