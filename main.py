@@ -124,4 +124,3 @@ else:
 
 chat_doc_idv
 vd
-d
