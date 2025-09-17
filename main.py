@@ -123,4 +123,3 @@ else:
     print("4. Verify message documents contain 'role', 'text', and 'createdAt' fields")
 
 chat_doc_idv
-vd
