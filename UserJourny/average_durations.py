@@ -8,7 +8,7 @@ import re
 
 # -------------------------------
 
-input_file = r"C:\Users\Dilshan\Desktop\User Journy\user_journey_2025-09-21.xlsx"  # <-- update date accordingly
+input_file = r"/Users/dilshanperera/Desktop/Chat_Report/UserJourny/user_journey_2025-09-22.xlsx"  # <-- update date accordingly
 
 df = pd.read_excel(input_file)
  
