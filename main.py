@@ -122,4 +122,4 @@ else:
     print("3. Check if customer collections exist under the 'chats' document")
     print("4. Verify message documents contain 'role', 'text', and 'createdAt' fields")
 
-update set where on
+update set where o
