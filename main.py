@@ -124,5 +124,4 @@ else:
 
 
 code update set where# -------------------------------
-# Connect and fetch data
-# -------------------------------
+# Connectxs
