@@ -9,15 +9,17 @@ import pytz
 
 # ------------------ Excluded UIDs ------------------
 EXCLUDED_UIDS = {
-    '1222', '1311', '1431', '1445', '1624', '1627', '1665', '4217', '4263', '4286', 
-    '4289', '4321', '4345', '4349', '4376', '4379', '4392', '4402', '4403', '4424', 
-    '4435', '4436', '4437', '4561', '4790', '7494', '8114', '8115', '8116', '8117', 
-    '8118', '8120', '8492', '10911003', '10911017', '10914122', '10916975',
-    '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', 
-    '15', '16', '17', '18', '19', '20', '22', '27', '30', '46', '166', '167', 
-    '168', '171', '172', '173', '174', '175', '177', '184', '205', '208', '241', 
-    '247', '3965', '3966', '3971', '10910540', '458', '601', '1646', '3967', 
-    '4417', '10913942', '655', '4032', '4231', '674', '624'
+    '630','4030','4133','4241','10916314','10916975','41','46','288','404',
+    '992','993','994','995','1046','1047','1048','1049','1050','1053','1058',
+    '1092','1093','1104','1147','1205','1210','1222','1311','1431','1445',
+    '1624','1627','1665','4217','4263','4286','4289','4321','4345','4349',
+    '4376','4379','4392','4402','4403','4424','4435','4436','4437','4561',
+    '4790','7494','8114','8115','8116','8117','8118','8120','8492','10911003',
+    '10911017','10914122','10916975','1','2','3','4','5','6','7','8','9','10',
+    '11','12','13','14','15','16','17','18','19','20','22','27','30','46',
+    '166','167','168','171','172','173','174','175','177','184','205','208',
+    '241','247','3965','3966','3971','10910540','458','601','1646','3967',
+    '4417','10913942','655','4032','4231','674','624'
 }
 
 # ------------------ Firebase Initialization ------------------
@@ -41,6 +43,7 @@ local_tz = pytz.timezone("Asia/Colombo")
 chat_root = db.collection("chat-updated").document("chats")
 response_details = defaultdict(list)
 all_customer_chats = defaultdict(list)
+unique_customer_uids = set()  # Track unique customer UIDs
 
 # ------------------ Load Chat Data ------------------
 print("\n📥 Starting to process chat data...")
@@ -73,6 +76,10 @@ try:
                 "chat_id": chat_doc.id,
                 "uid": str(uid) if uid else None  # Store UID as string
             })
+
+            # Add UID to unique_customer_uids if it's a customer message and not excluded
+            if role.lower() == "customer" and uid and str(uid) not in EXCLUDED_UIDS:
+                unique_customer_uids.add(str(uid))
 
 except Exception as e:
     print(f"❌ Error loading chat data: {e}")
@@ -150,6 +157,7 @@ for customer_id, messages in all_customer_chats.items():
 
 print(f"\n🔍 Filtered out {filtered_count} customer messages with excluded UIDs")
 print(f"📊 Total response pairs calculated: {total_count}")
+print(f"👥 Unique Customers (non-excluded UIDs): {len(unique_customer_uids)}")
 
 # ------------------ Analyze a Specific Date -------------------
 print("\n" + "="*60)
