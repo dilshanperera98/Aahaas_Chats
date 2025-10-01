@@ -9,21 +9,6 @@ from datetime import datetime
 import pytz
 import os
 
-# ------------------ Date Filter Input ------------------
-# Enter the date you want to filter (format: YYYY-MM-DD)
-FILTER_DATE = input("📅 Enter the date to filter (YYYY-MM-DD) or press Enter for all dates: ").strip()
-
-if FILTER_DATE:
-    try:
-        filter_date_obj = datetime.strptime(FILTER_DATE, "%Y-%m-%d").date()
-        print(f"✅ Filtering data for date: {FILTER_DATE}")
-    except ValueError:
-        print("❌ Invalid date format. Please use YYYY-MM-DD format.")
-        exit()
-else:
-    filter_date_obj = None
-    print("✅ Processing all dates")
-
 # ------------------ Ignore UID List ------------------
 IGNORE_UIDS = {
     '630', '4030', '4133', '4241', '10916314', '10916975', '41', '46', '288', '404', 
@@ -52,12 +37,7 @@ db = firestore.client()
 # ------------------ Output Path ------------------
 export_path = os.path.expanduser("~/Desktop/firebase_path")
 os.makedirs(export_path, exist_ok=True)
-
-# Create filename based on filter date
-if filter_date_obj:
-    output_file = os.path.join(export_path, f"customer_wise_chat_export_{FILTER_DATE}.xlsx")
-else:
-    output_file = os.path.join(export_path, "customer_wise_chat_export_all_dates.xlsx")
+output_file = os.path.join(export_path, "customer_wise_chat_export_all_dates.xlsx")
 
 # ------------------ Timezone ------------------
 local_tz = pytz.timezone("Asia/Colombo")
@@ -109,9 +89,8 @@ try:
             text = chat_data.get("text")
             created_at = chat_data.get("createdAt")
             name = chat_data.get("name", "Unknown")
-            uid = chat_data.get("uid", "")
 
-            print(f"      Message: role={role}, name={name}, uid={uid}, has_text={bool(text)}")
+            print(f"      Message: role={role}, name={name}, has_text={bool(text)}")
 
             if not role or not text:
                 print(f"      ⚠️ Skipping - missing role or text")
@@ -123,18 +102,10 @@ try:
                 print(f"      ⚠️ Invalid createdAt format: {created_at}")
                 continue
 
-            # Check if message matches the filter date (if specified)
-            if filter_date_obj:
-                message_date = created_at.date()
-                if message_date != filter_date_obj:
-                    print(f"      ⏭️ Skipping - date {message_date} doesn't match filter {filter_date_obj}")
-                    continue
-
             customer_name = name if role == "Customer" else ""
             admin_name = name if role == "Admin" else ""
 
             all_messages.append({
-                "uid": uid,
                 "customer_id": customer_id,
                 "customer_name": customer_name,
                 "chat_doc_id": chat_doc_id,
@@ -158,7 +129,7 @@ if all_messages:
     df = pd.DataFrame(all_messages)
     df['createdAt'] = df['createdAt'].apply(lambda dt: dt.strftime("%Y-%m-%d %I:%M:%S %p") if isinstance(dt, datetime) else None)
     
-    columns_order = ["uid", "customer_id", "customer_name", "chat_doc_id", "type", "message", "createdAt", "admin_name"]
+    columns_order = ["customer_id", "customer_name", "chat_doc_id", "type", "message", "createdAt", "admin_name"]
     df = df[[col for col in columns_order if col in df.columns]]
     
     df = df.sort_values(['customer_id', 'createdAt'], ascending=[True, True])
