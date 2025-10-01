@@ -1,125 +1,206 @@
 import firebase_admin
 from firebase_admin import credentials, firestore
-import pandas as pd
-from datetime import datetime
-import pytz
 import os
+from datetime import datetime, timedelta
+from collections import defaultdict, deque
+import pytz
+
+# ------------------ Excluded UIDs ------------------ 
+EXCLUDED_UIDS = {
+    '1222', '1311', '1431', '1445', '1624', '1627', '1665', '4217', '4263', '4286', 
+    '4289', '4321', '4345', '4349', '4376', '4379', '4392', '4402', '4403', '4424', 
+    '4435', '4436', '4437', '4561', '4790', '7494', '8114', '8115', '8116', '8117', 
+    '8118', '8120', '8492', '10911003', '10911017', '10914122', '10916975',
+    '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', 
+    '15', '16', '17', '18', '19', '20', '22', '27', '30', '46', '166', '167', 
+    '168', '171', '172', '173', '174', '175', '177', '184', '205', '208', '241', 
+    '247', '3965', '3966', '3971', '10910540', '458', '601', '1646', '3967', 
+    '4417', '10913942', '655', '4032', '4231', '674', '624'
+}
 
 # ------------------ Firebase Initialization ------------------
-if not firebase_admin._apps:
-    cred_path = os.path.expanduser("~/Desktop/firebaselogion/aahaas-bb222-firebase-adminsdk-go844-e44a0c6797.json")
-    cred = credentials.Certificate(cred_path)
-    firebase_admin.initialize_app(cred)
+try:
+    json_path = os.path.expanduser("~/Desktop/firebaselogion/aahaas-bb222-firebase-adminsdk-go844-e44a0c6797.json")
+    if not firebase_admin._apps:
+        cred = credentials.Certificate(json_path)
+        firebase_admin.initialize_app(cred)
 
-db = firestore.client() 
+    db = firestore.client()
+    _ = list(db.collections())
+    print("✅ Successfully connected to Firebase Firestore!")
 
-# ------------------ Output Path ------------------
-export_path = os.path.expanduser("~/Desktop/firebase_path")
-os.makedirs(export_path, exist_ok=True)
-output_file = os.path.join(export_path, "customer_wise_chat_export_all_dates.xlsx")
+except Exception as e:
+    print("❌ Failed to connect to Firebase.")
+    print(f"Error: {e}")
+    exit()
 
 # ------------------ Timezone ------------------
 local_tz = pytz.timezone("Asia/Colombo")
-
-# ------------------ References ------------------
 chat_root = db.collection("chat-updated").document("chats")
+response_details = defaultdict(list)
+all_customer_chats = defaultdict(list)
 
-# ------------------ Collect All Messages ------------------
-all_messages = []
-customer_count = 0
-
-print("🔍 Starting to process customers...")
+# ------------------ Load Chat Data ------------------
+print("\n📥 Starting to process chat data...")
 
 try:
     customer_collections = chat_root.collections()
-    customer_collections_list = list(customer_collections)
-
-    if not customer_collections_list:
-        print("No customer collections found under chat root document")
-    else:
-        print(f"✅Found {len(customer_collections_list)} customer collections")
-
-    for customer_col in customer_collections_list:
+    for customer_col in customer_collections:
         customer_id = customer_col.id
-        customer_count += 1
-        print(f"\n🔄 Processing customer {customer_count}: {customer_id}")
-        
-        chat_docs = list(customer_col.stream())
-        print(f"   📄 Found {len(chat_docs)} chat documents")
+        chat_docs = customer_col.stream()
 
         for chat_doc in chat_docs:
-            chat_doc_id = chat_doc.id
             chat_data = chat_doc.to_dict()
-
             if not chat_data:
-                print(f"   ⚠️ No data in chat document: {chat_doc_id}")
                 continue
 
-            print(f"   📝 Processing chat document: {chat_doc_id}")
+            created_at = chat_data.get("createdAt")
             role = chat_data.get("role")
             text = chat_data.get("text")
-            created_at = chat_data.get("createdAt")
-            name = chat_data.get("name", "Unknown")
+            uid = chat_data.get("uid")  # Get UID from message
 
-            print(f"      Message: role={role}, name={name}, has_text={bool(text)}")
-
-            if not role or not text:
-                print(f"      ⚠️ Skipping - missing role or text")
+            if not created_at or not role or not text:
                 continue
 
-            if isinstance(created_at, datetime):
-                created_at = created_at.replace(tzinfo=pytz.UTC).astimezone(local_tz)
-            else:
-                print(f"      ⚠️ Invalid createdAt format: {created_at}")
-                continue
+            created_at = created_at.astimezone(local_tz)
 
-            customer_name = name if role == "Customer" else ""
-            admin_name = name if role == "Admin" else ""
-
-            all_messages.append({
-                "customer_id": customer_id,
-                "customer_name": customer_name,
-                "chat_doc_id": chat_doc_id,
-                "type": role,
-                "message": text,
+            all_customer_chats[customer_id].append({
                 "createdAt": created_at,
-                "admin_name": admin_name
-            }) 
+                "role": role,
+                "text": text,
+                "chat_id": chat_doc.id,
+                "uid": str(uid) if uid else None  # Store UID as string
+            })
 
 except Exception as e:
-    print(f"❌ Error during processing: {e}")
-    import traceback
-    traceback.print_exc()
+    print(f"❌ Error loading chat data: {e}")
+    exit()
 
-print(f"\n📊 Total messages collected: {len(all_messages)}")
+# ------------------ Group Chats into Sessions ------------------
+def split_into_sessions(messages, gap_minutes=180):
+    messages.sort(key=lambda x: x["createdAt"])
+    sessions = []
+    current_session = [messages[0]]
 
-# ------------------ Create DataFrame ------------------
-if all_messages:
-    df = pd.DataFrame(all_messages)
-    df['createdAt'] = df['createdAt'].apply(lambda dt: dt.strftime("%Y-%m-%d %I:%M:%S %p") if isinstance(dt, datetime) else None)
-    
-    columns_order = ["customer_id", "customer_name", "chat_doc_id", "type", "message", "createdAt", "admin_name"]
-    df = df[[col for col in columns_order if col in df.columns]]
-    
-    df = df.sort_values(['customer_id', 'createdAt'], ascending=[True, True])
-    df.to_excel(output_file, index=False, engine='openpyxl')
+    for i in range(1, len(messages)):
+        time_diff = (messages[i]["createdAt"] - messages[i - 1]["createdAt"]).total_seconds() / 60
+        if time_diff > gap_minutes or messages[i]["createdAt"].date() != messages[i - 1]["createdAt"].date():
+            sessions.append(current_session)
+            current_session = [messages[i]]
+        else:
+            current_session.append(messages[i])
 
-    print(f"\n✅ Export complete. File saved at:\n{output_file}")
-    print(f"📈 Total rows exported: {len(df)}")
+    sessions.append(current_session)
+    return sessions
 
-    print(f"\n📊 Summary:")
-    print(f"   Total customers: {df['customer_id'].nunique()}")
-    print(f"   Total customer messages: {len(df[df['type'] == 'Customer'])}")
-    print(f"   Total admin messages: {len(df[df['type'] == 'Admin'])}")
+# ------------------ Process All Sessions and Match Admin Replies ------------------
+filtered_count = 0
+total_count = 0
+skipped_admin_count = 0  # Track skipped admin messages
 
-    print("\n📋 Sample data:") 
-    print(df.head(10))
-else:
-    print(f"\n⚠️ No messages found to export.")
-    print("\n🔍 Troubleshooting suggestions:")
-    print("1. Check if the Firestore path 'chat-updated/chats' is correct") 
-    print("2. Verify your Firebase credentials have read access")
-    print("3. Check if customer collections exist under the 'chats' document")
-    print("4. Verify message documents contain 'role', 'text', and 'createdAt' fields")
+for customer_id, messages in all_customer_chats.items():
+    if not messages:
+        continue
 
+    sessions = split_into_sessions(messages)
+    unmatched_customers = deque()
 
+    # Flatten all sessions and process chronologically
+    flat_messages = [msg for session in sessions for msg in session]
+    flat_messages.sort(key=lambda x: x["createdAt"])
+
+    for msg in flat_messages:
+        role = msg["role"].lower()
+        if role == "customer":
+            # Check if UID should be excluded
+            msg_uid = msg.get("uid")
+            if msg_uid and str(msg_uid) in EXCLUDED_UIDS:
+                filtered_count += 1
+                continue  # Skip this customer message
+            
+            unmatched_customers.append(msg)
+
+        elif role == "admin":
+            # Match with the earliest unmatched customer message
+            matched = False
+            for i, customer_msg in enumerate(unmatched_customers):
+                if msg["createdAt"] > customer_msg["createdAt"]:
+                    # Ensure the customer message is not from an excluded UID
+                    if customer_msg.get("uid") and str(customer_msg["uid"]) in EXCLUDED_UIDS:
+                        unmatched_customers.popleft()  # Remove the excluded customer message
+                        filtered_count += 1
+                        continue
+
+                    unmatched_customers.popleft()  # Remove the matched customer message
+                    total_count += 1
+                    response_time = (msg["createdAt"] - customer_msg["createdAt"]).total_seconds()
+                    response_date = customer_msg["createdAt"].date()
+
+                    response_details[response_date].append({
+                        "customer_id": customer_id,
+                        "response_time": response_time,
+                        "customer_msg": {
+                            "createdAt": customer_msg["createdAt"],
+                            "text": customer_msg["text"],
+                            "chat_id": customer_msg["chat_id"],
+                            "uid": customer_msg.get("uid")
+                        },
+                        "admin_msg": {
+                            "createdAt": msg["createdAt"],
+                            "text": msg["text"],
+                            "chat_id": msg["chat_id"]
+                        }
+                    })
+                    matched = True
+                    break  # Exit after finding one match
+            
+            if not matched:
+                skipped_admin_count += 1  # Increment skipped admin message count
+
+print(f"\n🔍 Filtered out {filtered_count} customer messages with excluded UIDs")
+print(f"🚫 Skipped {skipped_admin_count} admin messages due to no valid customer match")
+print(f"📊 Total response pairs calculated: {total_count}")
+
+# ------------------ Analyze a Specific Date -------------------
+print("\n" + "="*60)
+print("🔍 SEARCH RESPONSE TIME DETAIL BY DATE")
+print("="*60)
+
+search_date_input = input("\nEnter the date to search (YYYY-MM-DD): ")
+
+try:
+    search_date = datetime.strptime(search_date_input, "%Y-%m-%d").date()
+
+    if search_date in response_details:
+        responses = response_details[search_date]
+
+        if not responses:
+            print(f"\n📭 No response records found on {search_date}.")
+        else:
+            response_times = [r["response_time"] for r in responses]
+            max_response = max(responses, key=lambda x: x["response_time"])
+            min_response = min(responses, key=lambda x: x["response_time"])
+            avg_response = sum(response_times) / len(response_times)
+
+            print(f"\n📊 Response Time Stats for {search_date} (Excluded UIDs filtered):")
+            print(f"  📈 Total Responses: {len(responses)}")
+            print(f"  🔺 Max Response Time: {max_response['response_time']:.2f} sec ({max_response['response_time']/60:.2f} min)")
+            print(f"  🔻 Min Response Time: {min(response_times):.2f} sec ({min(response_times)/60:.2f} min)")
+            print(f"  🧮 Avg Response Time: {avg_response:.2f} sec ({avg_response/60:.2f} min)")
+
+            print(f"\n👤 Max Time Customer ID: {max_response['customer_id']}")
+            print(f"📨 Customer Message:")
+            print(f"  Chat ID : {max_response['customer_msg']['chat_id']}")
+            print(f"  UID     : {max_response['customer_msg'].get('uid', 'N/A')}")
+            print(f"  Time    : {max_response['customer_msg']['createdAt'].strftime('%Y-%m-%d %I:%M:%S %p')}")
+            print(f"  Text    : {max_response['customer_msg']['text']}")
+
+            print(f"\n✅ Admin Response:")
+            print(f"  Chat ID : {max_response['admin_msg']['chat_id']}")
+            print(f"  Time    : {max_response['admin_msg']['createdAt'].strftime('%Y-%m-%d %I:%M:%S %p')}")
+            print(f"  Text    : {max_response['admin_msg']['text']}")
+    else:
+        print(f"\n⚠️ No response data found for date: {search_date}")
+
+except ValueError:
+    print("\n❌ Invalid date format. Please use YYYY-MM-DD.")
