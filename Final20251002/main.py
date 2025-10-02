@@ -20,7 +20,6 @@ EXCLUDED_UIDS = {
     '4417','10913942','655','4032','4231','674','624','289'
 }
 
-l
 # ------------------ Firebase Initialization ------------------
 if not firebase_admin._apps:
     cred_path = os.path.expanduser("~/Desktop/firebaselogion/aahaas-bb222-firebase-adminsdk-go844-e44a0c6797.json")
