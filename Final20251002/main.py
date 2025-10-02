@@ -1,206 +1,189 @@
+import firebase_admin
+from firebase_admin import credentials, firestore
 import pandas as pd
-from datetime import datetime, timedelta
+from datetime import datetime
 import pytz
 import os
-from collections import defaultdict
 
-# ------------------ File Paths ------------------
-def get_file_path(search_date):
-    return os.path.expanduser(f"~/Desktop/firebase_path/customer_wise_chat_export_{search_date}.xlsx")
+# ------------------ Excluded UIDs ------------------
+EXCLUDED_UIDS = {
+    '630','4030','4133','4241','10916314','10916975','41','46','288','404',
+    '992','993','994','995','1046','1047','1048','1049','1050','1053','1058',
+    '1092','1093','1104','1147','1205','1210','1222','1311','1431','1445',
+    '1624','1627','1665','4217','4263','4286','4289','4321','4345','4349',
+    '4376','4379','4392','4402','4403','4424','4435','4436','4437','4561',
+    '4790','7494','8114','8115','8116','8117','8118','8120','8492','10911003',
+    '10911017','10914122','10916975','1','2','3','4','5','6','7','8','9','10',
+    '11','12','13','14','15','16','17','18','19','20','22','27','30','46',
+    '166','167','168','171','172','173','174','175','177','184','205','208',
+    '241','247','3965','3966','3971','10910540','458','601','1646','3967',
+    '4417','10913942','655','4032','4231','674','624','289'
+}
 
-output_txt_path = os.path.expanduser("~/Desktop/firebase_path/response_time_summary_corrected.txt")
-response_file = os.path.expanduser("~/Desktop/firebase_path/response_times_detailed.xlsx")
+# ------------------ Firebase Initialization ------------------
+if not firebase_admin._apps:
+    cred_path = os.path.expanduser("~/Desktop/firebaselogion/aahaas-bb222-firebase-adminsdk-go844-e44a0c6797.json")
+    cred = credentials.Certificate(cred_path)
+    firebase_admin.initialize_app(cred)
 
-# ------------------ Split Chats into Sessions ------------------
-def split_into_sessions(messages, gap_minutes=180):
-    messages = messages.sort_values('createdAt')
-    sessions = []
-    current_session = [messages.iloc[0]]
-    
-    for i in range(1, len(messages)):
-        time_diff = (messages.iloc[i]['createdAt'] - messages.iloc[i-1]['createdAt']).total_seconds() / 60
-        if time_diff > gap_minutes or messages.iloc[i]['createdAt'].date() != messages.iloc[i-1]['createdAt'].date():
-            sessions.append(pd.DataFrame(current_session))
-            current_session = [messages.iloc[i]]
-        else:
-            current_session.append(messages.iloc[i])
-    
-    sessions.append(pd.DataFrame(current_session))
-    return sessions
+db = firestore.client()
 
-# ------------------ Calculate Response Times ------------------
-def calculate_response_times(df, search_date):
-    response_details = defaultdict(list)
-    total_count = 0
-    
-    # Filter by date
-    df['date'] = df['createdAt'].dt.date
-    df_date = df[df['date'] == search_date].copy()
-    
-    if df_date.empty:
-        return None, 0, set()
-    
-    # Group by customer_id
-    grouped = df_date.groupby('customer_id')
-    unique_customer_uids = set()
-    
-    for customer_id, group in grouped:
-        # Add UID to unique_customer_uids if available
-        customer_msgs = group[group['type'].str.lower() == 'customer']
-        if not customer_msgs.empty and 'uid' in customer_msgs.columns:
-            uids = customer_msgs['uid'].dropna().astype(str)
-            unique_customer_uids.update(uids)
-        
-        # Split into sessions
-        sessions = split_into_sessions(group, gap_minutes=180)
-        
-        for session in sessions:
-            customer_msgs = session[session['type'].str.lower() == 'customer']
-            admin_msgs = session[session['type'].str.lower() == 'admin']
-            
-            unmatched_customers = []
-            
-            # Process messages in chronological order
-            for _, msg in session.sort_values('createdAt').iterrows():
-                role = msg['type'].lower()
-                
-                if role == 'customer':
-                    unmatched_customers.append(msg)
-                elif role == 'admin' and unmatched_customers:
-                    # Match with the earliest unmatched customer message
-                    customer_msg = unmatched_customers.pop(0)
-                    response_time = (msg['createdAt'] - customer_msg['createdAt']).total_seconds()
-                    response_date = customer_msg['createdAt'].date()
-                    
-                    total_count += 1
-                    response_details[response_date].append({
-                        'customer_id': customer_id,
-                        'customer_name': customer_msg.get('customer_name', 'Unknown'),
-                        'response_time': response_time,
-                        'customer_msg': {
-                            'createdAt': customer_msg['createdAt'],
-                            'text': customer_msg['message'],
-                            'chat_id': customer_msg['chat_doc_id'],
-                            'uid': customer_msg.get('uid', 'N/A')
-                        },
-                        'admin_msg': {
-                            'createdAt': msg['createdAt'],
-                            'text': msg['message'],
-                            'chat_id': msg['chat_doc_id'],
-                            'admin_name': msg.get('admin_name', 'Unknown')
-                        }
-                    })
-    
-    return response_details, total_count, unique_customer_uids
+# ------------------ Timezone ------------------
+local_tz = pytz.timezone("Asia/Colombo")
 
-# ------------------ Save Detailed Response Times to Excel ------------------
-def save_response_details(response_details, search_date):
-    if not response_details or search_date not in response_details:
-        return None
-    
-    responses = response_details[search_date]
-    response_data = []
-    
-    for r in responses:
-        response_data.append({
-            'customer_id': r['customer_id'],
-            'customer_name': r['customer_name'],
-            'response_time_sec': r['response_time'],
-            'response_time_min': r['response_time'] / 60,
-            'customer_chat_id': r['customer_msg']['chat_id'],
-            'customer_uid': r['customer_msg']['uid'],
-            'customer_message': r['customer_msg']['text'],
-            'customer_time': r['customer_msg']['createdAt'].replace(tzinfo=None),
-            'admin_chat_id': r['admin_msg']['chat_id'],
-            'admin_message': r['admin_msg']['text'],
-            'admin_time': r['admin_msg']['createdAt'].replace(tzinfo=None),
-            'admin_name': r['admin_msg']['admin_name']
-        })
-    
-    df_responses = pd.DataFrame(response_data)
-    return df_responses
+# ------------------ Get Date Input ------------------
+search_date_input = input("\nEnter the date to download chats (YYYY-MM-DD): ")
+try:
+    search_date = datetime.strptime(search_date_input, "%Y-%m-%d").date()
+except ValueError:
+    print("\n❌ Invalid date format. Please use YYYY-MM-DD.")
+    exit()
 
-# ------------------ Main Processing ------------------
-def main():
-    # Get user input for date
-    search_date_input = input("\nEnter the date to analyze (YYYY-MM-DD): ")
-    try:
-        search_date = datetime.strptime(search_date_input, "%Y-%m-%d").date()
-    except ValueError:
-        print("\n❌ Invalid date format. Please use YYYY-MM-DD.")
-        return
-    
-    # Load the Excel file
-    file_path = get_file_path(search_date)
-    try:
-        df = pd.read_excel(file_path)
-        df['createdAt'] = pd.to_datetime(df['createdAt'])
-        df = df.sort_values(['customer_id', 'createdAt'])
-    except Exception as e:
-        print(f"❌ Error loading Excel file: {e}")
-        print(f"\n🔍 Ensure the file {file_path} exists and contains valid data.")
-        return
-    
-    # Calculate response times
-    response_details, total_count, unique_customer_uids = calculate_response_times(df, search_date)
-    
-    # Save detailed response times to Excel
-    df_responses = save_response_details(response_details, search_date)
-    if df_responses is not None:
-        try:
-            df_responses.to_excel(response_file, index=False, engine='openpyxl')
-            print(f"\n✅ Detailed response times saved to: {response_file}")
-        except Exception as e:
-            print(f"❌ Error saving response times to Excel: {e}")
-    
-    # Output results
-    output_lines = []
-    output_lines.append("="*60)
-    output_lines.append(f"🔍 RESPONSE TIME SUMMARY FOR {search_date}")
-    output_lines.append("="*60)
-    output_lines.append(f"\n📊 Total response pairs calculated: {total_count}")
-    output_lines.append(f"👥 Unique Customers: {len(unique_customer_uids)}")
-    
-    if response_details and search_date in response_details:
-        responses = response_details[search_date]
-        response_times = [r['response_time'] for r in responses]
-        
-        if response_times:
-            max_response = max(responses, key=lambda x: x['response_time'])
-            min_response = min(responses, key=lambda x: x['response_time'])
-            avg_response = sum(response_times) / len(response_times)
-            
-            output_lines.append(f"\n📊 Response Time Stats for {search_date}:")
-            output_lines.append(f"  📈 Total Responses: {len(responses)}")
-            output_lines.append(f"  🔺 Max Response Time: {max_response['response_time']:.2f} sec ({max_response['response_time']/60:.2f} min)")
-            output_lines.append(f"  🔻 Min Response Time: {min(response_times):.2f} sec ({min(response_times)/60:.2f} min)")
-            output_lines.append(f"  🧮 Avg Response Time: {avg_response:.2f} sec ({avg_response/60:.2f} min)")
-            
-            output_lines.append(f"\n👤 Max Time Customer ID: {max_response['customer_id']}")
-            output_lines.append(f"📨 Customer Message:")
-            output_lines.append(f"  Chat ID : {max_response['customer_msg']['chat_id']}")
-            output_lines.append(f"  UID     : {max_response['customer_msg']['uid']}")
-            output_lines.append(f"  Time    : {max_response['customer_msg']['createdAt'].strftime('%Y-%m-%d %I:%M:%S %p')}")
-            output_lines.append(f"  Text    : {max_response['customer_msg']['text']}")
-            
-            output_lines.append(f"\n✅ Admin Response:")
-            output_lines.append(f"  Chat ID : {max_response['admin_msg']['chat_id']}")
-            output_lines.append(f"  Time    : {max_response['admin_msg']['createdAt'].strftime('%Y-%m-%d %I:%M:%S %p')}")
-            output_lines.append(f"  Text    : {max_response['admin_msg']['text']}")
-            output_lines.append(f"  Admin   : {max_response['admin_msg']['admin_name']}")
-        else:
-            output_lines.append(f"\n📭 No response records found on {search_date}.")
+# ------------------ Output Path ------------------
+export_path = os.path.expanduser("~/Desktop/firebase_path")
+os.makedirs(export_path, exist_ok=True)
+output_file = os.path.join(export_path, f"customer_wise_chat_export_{search_date}.xlsx")
+
+# ------------------ References ------------------
+chat_root = db.collection("chat-updated").document("chats")
+
+# ------------------ Collect All Messages ------------------
+all_messages = []
+customer_count = 0
+filtered_customer_ids = set()
+
+print(f"\n🔍 Starting to process customers for {search_date}...")
+
+try:
+    customer_collections = chat_root.collections()
+    customer_collections_list = list(customer_collections)
+
+    if not customer_collections_list:
+        print("No customer collections found under chat root document")
     else:
-        output_lines.append(f"\n⚠️ No response data found for date: {search_date}")
-    
-    # Print and save output
-    output_text = "\n".join(output_lines)
-    print(output_text)
-    
-    with open(output_txt_path, 'w') as f:
-        f.write(output_text)
-    
-    print(f"\n✅ Detailed summary saved to: {output_txt_path}")
+        print(f"✅ Found {len(customer_collections_list)} customer collections")
 
-if __name__ == "__main__":
-    main()
+    # First pass: Identify customer_ids with excluded UIDs
+    for customer_col in customer_collections_list:
+        customer_id = customer_col.id
+        chat_docs = list(customer_col.stream())
+        
+        for chat_doc in chat_docs:
+            chat_data = chat_doc.to_dict()
+            if not chat_data:
+                continue
+            
+            role = chat_data.get("role")
+            uid = str(chat_data.get("uid", "")) if chat_data.get("uid") else ""
+            created_at = chat_data.get("createdAt")
+            
+            if not role or not created_at:
+                continue
+                
+            if isinstance(created_at, datetime):
+                created_at = created_at.replace(tzinfo=pytz.UTC).astimezone(local_tz)
+                if created_at.date() != search_date:
+                    continue
+            else:
+                continue
+            
+            # If customer message has excluded UID, mark customer_id for exclusion
+            if role.lower() == "customer" and uid in EXCLUDED_UIDS:
+                filtered_customer_ids.add(customer_id)
+                break  # No need to check further messages for this customer_id
+
+    print(f"\n🔍 Excluded {len(filtered_customer_ids)} customer IDs due to excluded UIDs")
+
+    # Second pass: Collect messages for non-excluded customer_ids
+    for customer_col in customer_collections_list:
+        customer_id = customer_col.id
+        if customer_id in filtered_customer_ids:
+            continue  # Skip excluded customer_ids
+        
+        customer_count += 1
+        print(f"\n🔄 Processing customer {customer_count}: {customer_id}")
+        
+        chat_docs = list(customer_col.stream())
+        print(f"   📄 Found {len(chat_docs)} chat documents")
+
+        for chat_doc in chat_docs:
+            chat_doc_id = chat_doc.id
+            chat_data = chat_doc.to_dict()
+
+            if not chat_data:
+                print(f"   ⚠️ No data in chat document: {chat_doc_id}")
+                continue
+
+            print(f"   📝 Processing chat document: {chat_doc_id}")
+            role = chat_data.get("role")
+            text = chat_data.get("text")
+            created_at = chat_data.get("createdAt")
+            name = chat_data.get("name", "Unknown")
+            uid = str(chat_data.get("uid", "")) if chat_data.get("uid") else ""
+
+            print(f"      Message: role={role}, name={name}, uid={uid}, has_text={bool(text)}")
+
+            if not role or not text:
+                print(f"      ⚠️ Skipping - missing role or text")
+                continue
+
+            if isinstance(created_at, datetime):
+                created_at = created_at.replace(tzinfo=pytz.UTC).astimezone(local_tz)
+                if created_at.date() != search_date:
+                    print(f"      ⚠️ Skipping - message date {created_at.date()} does not match {search_date}")
+                    continue
+            else:
+                print(f"      ⚠️ Invalid createdAt format: {created_at}")
+                continue
+
+            customer_name = name if role.lower() == "customer" else ""
+            admin_name = name if role.lower() == "admin" else ""
+
+            all_messages.append({
+                "customer_id": customer_id,
+                "customer_name": customer_name,
+                "chat_doc_id": chat_doc_id,
+                "type": role,
+                "message": text,
+                "createdAt": created_at,
+                "admin_name": admin_name,
+                "uid": uid
+            }) 
+
+except Exception as e:
+    print(f"❌ Error during processing: {e}")
+    import traceback
+    traceback.print_exc()
+    exit()
+
+print(f"\n📊 Total messages collected: {len(all_messages)}")
+
+# ------------------ Create DataFrame ------------------
+if all_messages:
+    df = pd.DataFrame(all_messages)
+    # Convert timezone-aware datetimes to timezone-naive for Excel compatibility
+    df['createdAt'] = df['createdAt'].apply(lambda dt: dt.replace(tzinfo=None) if isinstance(dt, datetime) else None)
+    
+    columns_order = ["customer_id", "customer_name", "chat_doc_id", "type", "message", "createdAt", "admin_name", "uid"]
+    df = df[[col for col in columns_order if col in df.columns]]
+    
+    df = df.sort_values(['customer_id', 'createdAt'], ascending=[True, True])
+    df.to_excel(output_file, index=False, engine='openpyxl')
+
+    print(f"\n✅ Export complete. File saved at:\n{output_file}")
+    print(f"📈 Total rows exported: {len(df)}")
+
+    print(f"\n📊 Summary:")
+    print(f"   Total customers: {df['customer_id'].nunique()}")
+    print(f"   Total customer messages: {len(df[df['type'].str.lower() == 'customer'])}")
+    print(f"   Total admin messages: {len(df[df['type'].str.lower() == 'admin'])}")
+
+    print("\n📋 Sample data:") 
+    print(df.head(10))
+else:
+    print(f"\n⚠️ No messages found to export for {search_date}.")
+    print("\n🔍 Troubleshooting suggestions:")
+    print("1. Check if the Firestore path 'chat-updated/chats' is correct") 
+    print("2. Verify your Firebase credentials have read access")
+    print("3. Check if customer collections exist under the 'chats' document")
+    print("4. Verify message documents contain 'role', 'text', 'createdAt', and 'uid' fields")
