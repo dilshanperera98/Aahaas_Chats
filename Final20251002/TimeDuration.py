@@ -3,7 +3,7 @@ from datetime import datetime
 import os
 
 # ------------------ File Paths ------------------
-file_path = os.path.expanduser("~/Desktop/firebase_path/customer_wise_chat_export_2025-10-03.xlsx")
+file_path = os.path.expanduser("~/Desktop/firebase_path/customer_wise_chat_export_2025-10-07.xlsx")
 output_txt_path = os.path.expanduser("~/Desktop/firebase_path/response_time_summary.txt")
 
 # ------------------ Load the Excel File ------------------
