@@ -17,7 +17,7 @@ EXCLUDED_UIDS = {
     '11','12','13','14','15','16','17','18','19','20','22','27','30','46',
     '166','167','168','171','172','173','174','175','177','184','205','208',
     '241','247','3965','3966','3971','10910540','458','601','1646','3967',
-    '4417','10913942','655','4032','4231','674','624','289','663'
+    '4417','10913942','655','4032','4231','674','624','289','663','608','669'
 }
 
 # ------------------ Firebase Initialization ------------------
@@ -40,7 +40,9 @@ except ValueError:
     exit()
 
 # ------------------ Output Path ------------------
-export_path = os.path.expanduser("~/Desktop/firebase_path")
+#export_path = os.path.expanduser("~/Desktop/firebase_path")
+export_path = os.path.expanduser("~/Desktop/Chat_Report/Final20251002/exports")
+
 os.makedirs(export_path, exist_ok=True)
 output_file = os.path.join(export_path, f"customer_wise_chat_export_{search_date}.xlsx")
 

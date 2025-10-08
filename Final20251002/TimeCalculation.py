@@ -6,10 +6,15 @@ from collections import defaultdict
 
 # ------------------ File Paths ------------------
 def get_file_path(search_date):
-    return os.path.expanduser(f"~/Desktop/firebase_path/customer_wise_chat_export_{search_date}.xlsx")
+    #return os.path.expanduser(f"~/Desktop/firebase_path/customer_wise_chat_export_{search_date}.xlsx")
 
-output_txt_path = os.path.expanduser("~/Desktop/firebase_path/response_time_summary_corrected.txt")
-response_file = os.path.expanduser("~/Desktop/firebase_path/response_times_detailed.xlsx")
+    return os.path.expanduser(f"~/Desktop/Chat_Report/Final20251002/exports/customer_wise_chat_export_{search_date}.xlsx")
+
+#output_txt_path = os.path.expanduser("~/Desktop/firebase_path/response_time_summary_corrected.txt")
+#response_file = os.path.expanduser("~/Desktop/firebase_path/response_times_detailed.xlsx")
+
+output_txt_path = os.path.expanduser("~/Desktop/Chat_Report/Final20251002/exports/response_time_summary_corrected.txt")
+response_file = os.path.expanduser("~/Desktop/Chat_Report/Final20251002/exports/response_times_detailed.xlsx")
 
 # ------------------ Split Chats into Sessions ------------------
 def split_into_sessions(messages, gap_minutes=180):

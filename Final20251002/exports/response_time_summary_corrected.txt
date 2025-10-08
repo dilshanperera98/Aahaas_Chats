@@ -1,0 +1,27 @@
+============================================================
+🔍 RESPONSE TIME SUMMARY FOR 2025-10-07
+============================================================
+
+📊 Total response pairs calculated: 9
+👥 Unique Customers: 3
+
+📊 Response Time Stats for 2025-10-07:
+  📈 Total Responses: 9
+  🔺 Max Response Time: 2262.26 sec (37.70 min)
+  🔻 Min Response Time: 12.75 sec (0.21 min)
+  🧮 Avg Response Time: 329.90 sec (5.50 min)
+
+👤 Max Time Customer ID: PrdVhXrTJws9TxQ7pWZj
+📨 Customer Message:
+  Chat ID : b3crKOGYK5aXLRTg4PeU
+  UID     : 4823
+  Time    : 2025-10-07 12:55:35 PM
+  Text    : Hi i cant book flight
+
+✅ Admin Response:
+  Chat ID : JEeF0LGKmNm6udm9QEEg
+  Time    : 2025-10-07 01:33:18 PM
+  Text    : Hello! Thank you for reaching out to us.
+How can I assist you today?
+
+  Admin   : Michelle Xavier
