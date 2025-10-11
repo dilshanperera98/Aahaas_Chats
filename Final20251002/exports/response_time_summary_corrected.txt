@@ -1,26 +1,25 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-10-08
+🔍 RESPONSE TIME SUMMARY FOR 2025-10-10
 ============================================================
 
-📊 Total response pairs calculated: 5
-👥 Unique Customers: 1
+📊 Total response pairs calculated: 15
+👥 Unique Customers: 6
 
-📊 Response Time Stats for 2025-10-08:
-  📈 Total Responses: 5
-  🔺 Max Response Time: 27.57 sec (0.46 min)
-  🔻 Min Response Time: 5.97 sec (0.10 min)
-  🧮 Avg Response Time: 18.85 sec (0.31 min)
+📊 Response Time Stats for 2025-10-10:
+  📈 Total Responses: 15
+  🔺 Max Response Time: 93.11 sec (1.55 min)
+  🔻 Min Response Time: 9.54 sec (0.16 min)
+  🧮 Avg Response Time: 53.70 sec (0.89 min)
 
-👤 Max Time Customer ID: H6phWzLnkONAcrf6heCr
+👤 Max Time Customer ID: AbX0Fd9NRImFtqh9e25G
 📨 Customer Message:
-  Chat ID : E6TkbYo7RqnPfweYw0Ze
-  UID     : 1230
-  Time    : 2025-10-08 12:38:36 PM
-  Text    : Hi, I was searching for "Colombo to kandy" but couldn't find any results. Can you help me find what I'm looking for?
+  Chat ID : rkNGVl77KrIFpwDOjrfN
+  UID     : 1634.0
+  Time    : 2025-10-10 08:11:04 AM
+  Text    : Hi, I was searching for "Hightea" but couldn't find any results. Can you help me find what I'm looking for?
 
 ✅ Admin Response:
-  Chat ID : 7QKVclnQJVYKnhdR13D1
-  Time    : 2025-10-08 12:39:04 PM
-  Text    : Hi shafr1929, Thank you for bringing this to our attention. How can we assist you?
-
-  Admin   : Alesha.H
+  Chat ID : FcoLob3orLW4xPsmXyM8
+  Time    : 2025-10-10 08:12:37 AM
+  Text    : Hi Hirunierasha, I apologize for the confusion. It seems like there might have been a typo in your search. Are you looking for information on "High Tea"? Let me know how I can assist you further.
+  Admin   : Michelle Xavier
