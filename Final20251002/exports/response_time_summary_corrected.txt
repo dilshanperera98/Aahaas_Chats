@@ -1,25 +1,26 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-10-10
+🔍 RESPONSE TIME SUMMARY FOR 2025-10-12
 ============================================================
 
-📊 Total response pairs calculated: 15
-👥 Unique Customers: 6
+📊 Total response pairs calculated: 9
+👥 Unique Customers: 2
 
-📊 Response Time Stats for 2025-10-10:
-  📈 Total Responses: 15
-  🔺 Max Response Time: 93.11 sec (1.55 min)
-  🔻 Min Response Time: 9.54 sec (0.16 min)
-  🧮 Avg Response Time: 53.70 sec (0.89 min)
+📊 Response Time Stats for 2025-10-12:
+  📈 Total Responses: 9
+  🔺 Max Response Time: 6052.09 sec (100.87 min)
+  🔻 Min Response Time: 12.06 sec (0.20 min)
+  🧮 Avg Response Time: 731.18 sec (12.19 min)
 
-👤 Max Time Customer ID: AbX0Fd9NRImFtqh9e25G
+👤 Max Time Customer ID: hTjxcVJddQXltpK6zZ0l
 📨 Customer Message:
-  Chat ID : rkNGVl77KrIFpwDOjrfN
-  UID     : 1634.0
-  Time    : 2025-10-10 08:11:04 AM
-  Text    : Hi, I was searching for "Hightea" but couldn't find any results. Can you help me find what I'm looking for?
+  Chat ID : b88s9EbqULF6PCJLMDpg
+  UID     : 10919008
+  Time    : 2025-10-12 01:04:19 PM
+  Text    : Hey could you please check, the discounted galle face hotel lunch buffet price is not coming when I try to pay, per person it’s LKR 4200 something with the discount noh, but when I’m trying to pay it shows LKR 5000 something per person , so when checking out discount is not applying it seems
 
 ✅ Admin Response:
-  Chat ID : FcoLob3orLW4xPsmXyM8
-  Time    : 2025-10-10 08:12:37 AM
-  Text    : Hi Hirunierasha, I apologize for the confusion. It seems like there might have been a typo in your search. Are you looking for information on "High Tea"? Let me know how I can assist you further.
-  Admin   : Michelle Xavier
+  Chat ID : N5kA9sn0mbdOYcbQth5k
+  Time    : 2025-10-12 02:45:11 PM
+  Text    : Please allow us sometime, we are checking on this. we will get back to you. 
+
+  Admin   : Dishmi
