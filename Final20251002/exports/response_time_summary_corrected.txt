@@ -1,26 +1,25 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-10-13
+🔍 RESPONSE TIME SUMMARY FOR 2025-10-16
 ============================================================
 
-📊 Total response pairs calculated: 16
+📊 Total response pairs calculated: 14
 👥 Unique Customers: 5
 
-📊 Response Time Stats for 2025-10-13:
-  📈 Total Responses: 16
-  🔺 Max Response Time: 425.12 sec (7.09 min)
-  🔻 Min Response Time: 9.12 sec (0.15 min)
-  🧮 Avg Response Time: 126.46 sec (2.11 min)
+📊 Response Time Stats for 2025-10-16:
+  📈 Total Responses: 14
+  🔺 Max Response Time: 773.99 sec (12.90 min)
+  🔻 Min Response Time: 34.42 sec (0.57 min)
+  🧮 Avg Response Time: 479.25 sec (7.99 min)
 
-👤 Max Time Customer ID: Q7SG32mOUdQ0LmprOWrU
+👤 Max Time Customer ID: 2KQ96SgHabtvBrVh2pBF
 📨 Customer Message:
-  Chat ID : UN82pVuC7Jjd4W6xd2cy
-  UID     : 10918508
-  Time    : 2025-10-13 07:23:02 PM
-  Text    : ??
+  Chat ID : luHdWssyD4CbgJW2tijI
+  UID     : 633
+  Time    : 2025-10-16 06:04:01 PM
+  Text    : Hi, I was searching for "Kar" but couldn't find any results. Can you help me find what I'm looking for?
 
 ✅ Admin Response:
-  Chat ID : n54grD5h58k8HExwKK25
-  Time    : 2025-10-13 07:30:07 PM
-  Text    : yes can i know the dates that needed to be changed
-
-  Admin   : shehan_darwish
+  Chat ID : OoXfVYco2Xu2DbYUIedT
+  Time    : 2025-10-16 06:16:55 PM
+  Text    : Hi
+  Admin   : Alesha.H
