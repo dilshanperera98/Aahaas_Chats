@@ -1,25 +1,26 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-10-16
+🔍 RESPONSE TIME SUMMARY FOR 2025-10-17
 ============================================================
 
-📊 Total response pairs calculated: 14
-👥 Unique Customers: 5
+📊 Total response pairs calculated: 9
+👥 Unique Customers: 4
 
-📊 Response Time Stats for 2025-10-16:
-  📈 Total Responses: 14
-  🔺 Max Response Time: 773.99 sec (12.90 min)
-  🔻 Min Response Time: 34.42 sec (0.57 min)
-  🧮 Avg Response Time: 479.25 sec (7.99 min)
+📊 Response Time Stats for 2025-10-17:
+  📈 Total Responses: 9
+  🔺 Max Response Time: 135.94 sec (2.27 min)
+  🔻 Min Response Time: 12.23 sec (0.20 min)
+  🧮 Avg Response Time: 92.68 sec (1.54 min)
 
-👤 Max Time Customer ID: 2KQ96SgHabtvBrVh2pBF
+👤 Max Time Customer ID: U2LVg6PPPxh4TlYBjFQo
 📨 Customer Message:
-  Chat ID : luHdWssyD4CbgJW2tijI
-  UID     : 633
-  Time    : 2025-10-16 06:04:01 PM
-  Text    : Hi, I was searching for "Kar" but couldn't find any results. Can you help me find what I'm looking for?
+  Chat ID : iHHqmK1KUdqWXaQBeqVX
+  UID     : 10917369
+  Time    : 2025-10-17 12:18:21 PM
+  Text    : Could you please confirm whether the lunch buffet offer at Cinnamon Life applies on weekends as well?
 
 ✅ Admin Response:
-  Chat ID : OoXfVYco2Xu2DbYUIedT
-  Time    : 2025-10-16 06:16:55 PM
-  Text    : Hi
-  Admin   : Alesha.H
+  Chat ID : 9WBRJ44WWov9MQ10IA8x
+  Time    : 2025-10-17 12:20:37 PM
+  Text    : Yes, it does apply on weekends as well. 
+
+  Admin   : Michelle Xavier
