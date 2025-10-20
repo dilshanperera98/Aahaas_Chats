@@ -1,26 +1,25 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-10-17
+🔍 RESPONSE TIME SUMMARY FOR 2025-10-19
 ============================================================
 
-📊 Total response pairs calculated: 9
-👥 Unique Customers: 4
+📊 Total response pairs calculated: 45
+👥 Unique Customers: 22
 
-📊 Response Time Stats for 2025-10-17:
-  📈 Total Responses: 9
-  🔺 Max Response Time: 135.94 sec (2.27 min)
-  🔻 Min Response Time: 12.23 sec (0.20 min)
-  🧮 Avg Response Time: 92.68 sec (1.54 min)
+📊 Response Time Stats for 2025-10-19:
+  📈 Total Responses: 45
+  🔺 Max Response Time: 9154.15 sec (152.57 min)
+  🔻 Min Response Time: 12.47 sec (0.21 min)
+  🧮 Avg Response Time: 1174.77 sec (19.58 min)
 
-👤 Max Time Customer ID: U2LVg6PPPxh4TlYBjFQo
+👤 Max Time Customer ID: HFIoOzgArQA6HJtmb4PV
 📨 Customer Message:
-  Chat ID : iHHqmK1KUdqWXaQBeqVX
-  UID     : 10917369
-  Time    : 2025-10-17 12:18:21 PM
-  Text    : Could you please confirm whether the lunch buffet offer at Cinnamon Life applies on weekends as well?
+  Chat ID : 0BdRn4vLJDlnj1mBGY3a
+  UID     : 10919454
+  Time    : 2025-10-19 05:06:42 PM
+  Text    : Hi, I was searching for "Bangcock" but couldn't find any results. Can you help me find what I'm looking for?
 
 ✅ Admin Response:
-  Chat ID : 9WBRJ44WWov9MQ10IA8x
-  Time    : 2025-10-17 12:20:37 PM
-  Text    : Yes, it does apply on weekends as well. 
-
-  Admin   : Michelle Xavier
+  Chat ID : 2W9iK5Vo1EKLg0vkzt02
+  Time    : 2025-10-19 07:39:16 PM
+  Text    : Hi vimukthi53, I'm sorry that you couldn't find what you were looking for. Can you please provide me with more details about your search so that I can assist you better? Thank you!
+  Admin   : Alesha.H
