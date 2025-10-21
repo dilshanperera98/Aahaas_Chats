@@ -1,26 +1,25 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-10-20
+🔍 RESPONSE TIME SUMMARY FOR 2025-10-18
 ============================================================
 
-📊 Total response pairs calculated: 65
-👥 Unique Customers: 23
+📊 Total response pairs calculated: 8
+👥 Unique Customers: 5
 
-📊 Response Time Stats for 2025-10-20:
-  📈 Total Responses: 65
-  🔺 Max Response Time: 1465.60 sec (24.43 min)
-  🔻 Min Response Time: 7.05 sec (0.12 min)
-  🧮 Avg Response Time: 137.19 sec (2.29 min)
+📊 Response Time Stats for 2025-10-18:
+  📈 Total Responses: 8
+  🔺 Max Response Time: 10758.18 sec (179.30 min)
+  🔻 Min Response Time: 16.66 sec (0.28 min)
+  🧮 Avg Response Time: 1406.33 sec (23.44 min)
 
-👤 Max Time Customer ID: tHmkVry8oNqlBwqBDSjp
+👤 Max Time Customer ID: g047RWnENJYb63P4DHFH
 📨 Customer Message:
-  Chat ID : dtzVOk2gS5OQWiiGxPtn
-  UID     : 10919493
-  Time    : 2025-10-20 10:31:44 PM
-  Text    : Hi, I was searching for "Day outs" but couldn't find any results. Can you help me find what I'm looking for?
+  Chat ID : lq1eIxUQQ3JOUMzKpwxE
+  UID     : 10919417
+  Time    : 2025-10-18 01:21:38 PM
+  Text    : Hi, I was searching for "Gocar" but couldn't find any results. Can you help me find what I'm looking for?
 
 ✅ Admin Response:
-  Chat ID : CnQ2gzN6a6bzKvR6JVLv
-  Time    : 2025-10-20 10:56:09 PM
-  Text    : Hi Mila27, I'm sorry you couldn't find what you were looking for. Can you please provide me with more details about the type of day outs you are interested in? I'd be happy to help you find the perfect option for you. Let me know how I can assist you further.kindly contact us to +94 71 174 4227
-
-  Admin   : shamraz
+  Chat ID : oGHSF3ieZJ32okCL6BDi
+  Time    : 2025-10-18 04:20:56 PM
+  Text    : Hi Angi! I'm sorry you couldn't find what you were looking for. Let me assist you in finding the information you need. Thank you for reaching out!
+  Admin   : Michelle Xavier
