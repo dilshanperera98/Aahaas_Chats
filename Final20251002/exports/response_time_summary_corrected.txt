@@ -1,25 +1,26 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-10-18
+🔍 RESPONSE TIME SUMMARY FOR 2025-10-21
 ============================================================
 
-📊 Total response pairs calculated: 8
-👥 Unique Customers: 5
+📊 Total response pairs calculated: 82
+👥 Unique Customers: 22
 
-📊 Response Time Stats for 2025-10-18:
-  📈 Total Responses: 8
-  🔺 Max Response Time: 10758.18 sec (179.30 min)
-  🔻 Min Response Time: 16.66 sec (0.28 min)
-  🧮 Avg Response Time: 1406.33 sec (23.44 min)
+📊 Response Time Stats for 2025-10-21:
+  📈 Total Responses: 82
+  🔺 Max Response Time: 5926.85 sec (98.78 min)
+  🔻 Min Response Time: 2.12 sec (0.04 min)
+  🧮 Avg Response Time: 215.35 sec (3.59 min)
 
-👤 Max Time Customer ID: g047RWnENJYb63P4DHFH
+👤 Max Time Customer ID: vWJW8qpNDhdc51uxgCgh
 📨 Customer Message:
-  Chat ID : lq1eIxUQQ3JOUMzKpwxE
-  UID     : 10919417
-  Time    : 2025-10-18 01:21:38 PM
-  Text    : Hi, I was searching for "Gocar" but couldn't find any results. Can you help me find what I'm looking for?
+  Chat ID : ol6OhDz4aQooSrtG0HaU
+  UID     : AHS_Guest
+  Time    : 2025-10-21 04:49:29 AM
+  Text    : Hi, I was searching for "Budget full b" but couldn't find any results. Can you help me find what I'm looking for?
 
 ✅ Admin Response:
-  Chat ID : oGHSF3ieZJ32okCL6BDi
-  Time    : 2025-10-18 04:20:56 PM
-  Text    : Hi Angi! I'm sorry you couldn't find what you were looking for. Let me assist you in finding the information you need. Thank you for reaching out!
-  Admin   : Michelle Xavier
+  Chat ID : jZIEEGyyJFzuyaDigqlh
+  Time    : 2025-10-21 06:28:15 AM
+  Text    : hi
+
+  Admin   : Dishmi
