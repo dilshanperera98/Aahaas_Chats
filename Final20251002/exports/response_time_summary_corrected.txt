@@ -1,26 +1,25 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-10-21
+🔍 RESPONSE TIME SUMMARY FOR 2025-10-22
 ============================================================
 
-📊 Total response pairs calculated: 82
-👥 Unique Customers: 22
+📊 Total response pairs calculated: 52
+👥 Unique Customers: 26
 
-📊 Response Time Stats for 2025-10-21:
-  📈 Total Responses: 82
-  🔺 Max Response Time: 5926.85 sec (98.78 min)
-  🔻 Min Response Time: 2.12 sec (0.04 min)
-  🧮 Avg Response Time: 215.35 sec (3.59 min)
+📊 Response Time Stats for 2025-10-22:
+  📈 Total Responses: 52
+  🔺 Max Response Time: 1336.15 sec (22.27 min)
+  🔻 Min Response Time: 5.68 sec (0.09 min)
+  🧮 Avg Response Time: 133.27 sec (2.22 min)
 
-👤 Max Time Customer ID: vWJW8qpNDhdc51uxgCgh
+👤 Max Time Customer ID: 5rmnHsMbwMagyAOB44B6
 📨 Customer Message:
-  Chat ID : ol6OhDz4aQooSrtG0HaU
-  UID     : AHS_Guest
-  Time    : 2025-10-21 04:49:29 AM
-  Text    : Hi, I was searching for "Budget full b" but couldn't find any results. Can you help me find what I'm looking for?
+  Chat ID : dzH0bex389HnMsl10Jw7
+  UID     : 10918058
+  Time    : 2025-10-22 02:20:29 PM
+  Text    : Hi, I was searching for "Jap" but couldn't find any results. Can you help me find what I'm looking for?
 
 ✅ Admin Response:
-  Chat ID : jZIEEGyyJFzuyaDigqlh
-  Time    : 2025-10-21 06:28:15 AM
-  Text    : hi
-
+  Chat ID : 62IwsqDVRMWIZUGRU1rx
+  Time    : 2025-10-22 02:42:45 PM
+  Text    : Hi Harindara, I'm sorry you couldn't find what you were looking for. Can you please provide me with more details so I can assist you better? Thank you!
   Admin   : Dishmi
