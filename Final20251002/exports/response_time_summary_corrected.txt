@@ -1,25 +1,25 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-10-22
+🔍 RESPONSE TIME SUMMARY FOR 2025-10-23
 ============================================================
 
-📊 Total response pairs calculated: 52
-👥 Unique Customers: 26
+📊 Total response pairs calculated: 49
+👥 Unique Customers: 27
 
-📊 Response Time Stats for 2025-10-22:
-  📈 Total Responses: 52
-  🔺 Max Response Time: 1336.15 sec (22.27 min)
-  🔻 Min Response Time: 5.68 sec (0.09 min)
-  🧮 Avg Response Time: 133.27 sec (2.22 min)
+📊 Response Time Stats for 2025-10-23:
+  📈 Total Responses: 49
+  🔺 Max Response Time: 848.93 sec (14.15 min)
+  🔻 Min Response Time: 1.99 sec (0.03 min)
+  🧮 Avg Response Time: 90.57 sec (1.51 min)
 
-👤 Max Time Customer ID: 5rmnHsMbwMagyAOB44B6
+👤 Max Time Customer ID: 22HIY2PagsWQ2UO1Be6Y
 📨 Customer Message:
-  Chat ID : dzH0bex389HnMsl10Jw7
-  UID     : 10918058
-  Time    : 2025-10-22 02:20:29 PM
-  Text    : Hi, I was searching for "Jap" but couldn't find any results. Can you help me find what I'm looking for?
+  Chat ID : kzecGpkLtkaSe87rzeGQ
+  UID     : 10914308
+  Time    : 2025-10-23 06:44:16 PM
+  Text    : Hi im unable to select booking date
 
 ✅ Admin Response:
-  Chat ID : 62IwsqDVRMWIZUGRU1rx
-  Time    : 2025-10-22 02:42:45 PM
-  Text    : Hi Harindara, I'm sorry you couldn't find what you were looking for. Can you please provide me with more details so I can assist you better? Thank you!
-  Admin   : Dishmi
+  Chat ID : 5TXJFRIM2rfahtHcz5dd
+  Time    : 2025-10-23 06:58:25 PM
+  Text    : Hello Dillon, thank you for reaching out. I apologize for the inconvenience you're experiencing with selecting a booking date. Could you please provide me with more details so I can assist you further? Thank you.
+  Admin   : Alesha.H
