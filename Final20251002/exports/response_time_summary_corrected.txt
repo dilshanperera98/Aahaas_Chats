@@ -1,25 +1,25 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-10-23
+🔍 RESPONSE TIME SUMMARY FOR 2025-10-24
 ============================================================
 
-📊 Total response pairs calculated: 49
+📊 Total response pairs calculated: 48
 👥 Unique Customers: 27
 
-📊 Response Time Stats for 2025-10-23:
-  📈 Total Responses: 49
-  🔺 Max Response Time: 848.93 sec (14.15 min)
-  🔻 Min Response Time: 1.99 sec (0.03 min)
-  🧮 Avg Response Time: 90.57 sec (1.51 min)
+📊 Response Time Stats for 2025-10-24:
+  📈 Total Responses: 48
+  🔺 Max Response Time: 3868.83 sec (64.48 min)
+  🔻 Min Response Time: 10.99 sec (0.18 min)
+  🧮 Avg Response Time: 717.26 sec (11.95 min)
 
-👤 Max Time Customer ID: 22HIY2PagsWQ2UO1Be6Y
+👤 Max Time Customer ID: vWJW8qpNDhdc51uxgCgh
 📨 Customer Message:
-  Chat ID : kzecGpkLtkaSe87rzeGQ
-  UID     : 10914308
-  Time    : 2025-10-23 06:44:16 PM
-  Text    : Hi im unable to select booking date
+  Chat ID : ou4C8gKKCkPCaUxwA8OG
+  UID     : AHS_Guest
+  Time    : 2025-10-24 05:05:39 PM
+  Text    : Hi, I was searching for "Barbecue" but couldn't find any results. Can you help me find what I'm looking for?
 
 ✅ Admin Response:
-  Chat ID : 5TXJFRIM2rfahtHcz5dd
-  Time    : 2025-10-23 06:58:25 PM
-  Text    : Hello Dillon, thank you for reaching out. I apologize for the inconvenience you're experiencing with selecting a booking date. Could you please provide me with more details so I can assist you further? Thank you.
+  Chat ID : Xqobon6uhO2yhzMHL0eq
+  Time    : 2025-10-24 06:10:08 PM
+  Text    : Hi, I'm sorry you couldn't find what you were looking for. Let me assist you in finding information on "Jetwing". Please hold on while I search for the details. Thank you for your patience!
   Admin   : Alesha.H
