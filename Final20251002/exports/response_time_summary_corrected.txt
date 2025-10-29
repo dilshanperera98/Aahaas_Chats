@@ -1,26 +1,25 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-10-27
+🔍 RESPONSE TIME SUMMARY FOR 2025-10-28
 ============================================================
 
-📊 Total response pairs calculated: 47
-👥 Unique Customers: 21
+📊 Total response pairs calculated: 43
+👥 Unique Customers: 25
 
-📊 Response Time Stats for 2025-10-27:
-  📈 Total Responses: 47
-  🔺 Max Response Time: 4945.16 sec (82.42 min)
-  🔻 Min Response Time: 54.59 sec (0.91 min)
-  🧮 Avg Response Time: 314.49 sec (5.24 min)
+📊 Response Time Stats for 2025-10-28:
+  📈 Total Responses: 43
+  🔺 Max Response Time: 2592.22 sec (43.20 min)
+  🔻 Min Response Time: 0.88 sec (0.01 min)
+  🧮 Avg Response Time: 183.43 sec (3.06 min)
 
-👤 Max Time Customer ID: h5zHe9ZiKNXvughAokL4
+👤 Max Time Customer ID: AD4lZTIiuhzqUZF6Twd3
 📨 Customer Message:
-  Chat ID : ISASbd5BKcBI2jYm9u7N
-  UID     : 10919650
-  Time    : 2025-10-27 05:42:48 AM
-  Text    : Hi, I was searching for "Day out" but couldn't find any results. Can you help me find what I'm looking for?
+  Chat ID : fIF0dNxnW5qkpKOfkDMQ
+  UID     : 10919727
+  Time    : 2025-10-28 07:45:47 PM
+  Text    : Hi, I was searching for "Thail" but couldn't find any results. Can you help me find what I'm looking for?
 
 ✅ Admin Response:
-  Chat ID : u3MGU83Td0B8Fvdpm78k
-  Time    : 2025-10-27 07:05:13 AM
-  Text    : Hi Ho
-w can we assist you today?
-  Admin   : Dishmi
+  Chat ID : jxLcoIA9DO6JB2QMK1K8
+  Time    : 2025-10-28 08:28:59 PM
+  Text    : Hi kesar3206, I'm sorry but it looks like there may have been a typo in your search. Could you please provide more information about what you're looking for so I can assist you better? Thank you!
+  Admin   : shamraz

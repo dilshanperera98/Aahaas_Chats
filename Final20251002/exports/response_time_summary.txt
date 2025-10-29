@@ -1,12 +1,12 @@
-📅 Date: 2025-10-27
-   ➤ Total Admin Responses: 47
-   ➤ 0-10 Sec: 0 (0.00%)
-   ➤ 10-30 Sec: 0 (0.00%)
-   ➤ 30+ Sec: 47 (100.00%)
+📅 Date: 2025-10-28
+   ➤ Total Admin Responses: 43
+   ➤ 0-10 Sec: 3 (6.98%)
+   ➤ 10-30 Sec: 13 (30.23%)
+   ➤ 30+ Sec: 27 (62.79%)
 
 
 📊 Overall Totals:
-   ➤ Total Admin Responses: 47
-   ➤ 0-10 Sec: 0 (0.00%)
-   ➤ 10-30 Sec: 0 (0.00%)
-   ➤ 30+ Sec: 47 (100.00%)
+   ➤ Total Admin Responses: 43
+   ➤ 0-10 Sec: 3 (6.98%)
+   ➤ 10-30 Sec: 13 (30.23%)
+   ➤ 30+ Sec: 27 (62.79%)
