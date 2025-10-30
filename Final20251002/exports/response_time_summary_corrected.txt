@@ -1,25 +1,28 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-10-28
+🔍 RESPONSE TIME SUMMARY FOR 2025-10-29
 ============================================================
 
-📊 Total response pairs calculated: 43
-👥 Unique Customers: 25
+📊 Total response pairs calculated: 51
+👥 Unique Customers: 18
 
-📊 Response Time Stats for 2025-10-28:
-  📈 Total Responses: 43
-  🔺 Max Response Time: 2592.22 sec (43.20 min)
-  🔻 Min Response Time: 0.88 sec (0.01 min)
-  🧮 Avg Response Time: 183.43 sec (3.06 min)
+📊 Response Time Stats for 2025-10-29:
+  📈 Total Responses: 51
+  🔺 Max Response Time: 7527.38 sec (125.46 min)
+  🔻 Min Response Time: 12.05 sec (0.20 min)
+  🧮 Avg Response Time: 211.36 sec (3.52 min)
 
-👤 Max Time Customer ID: AD4lZTIiuhzqUZF6Twd3
+👤 Max Time Customer ID: cd0VfPfyIVeQaHXUSM1G
 📨 Customer Message:
-  Chat ID : fIF0dNxnW5qkpKOfkDMQ
-  UID     : 10919727
-  Time    : 2025-10-28 07:45:47 PM
-  Text    : Hi, I was searching for "Thail" but couldn't find any results. Can you help me find what I'm looking for?
+  Chat ID : ae53YMisWYgI8av4LrAE
+  UID     : 10918838
+  Time    : 2025-10-29 03:26:42 PM
+  Text    : Any update on the refund? Cuz it's been 18 days already. You informed me it will only take 4-7 days
 
 ✅ Admin Response:
-  Chat ID : jxLcoIA9DO6JB2QMK1K8
-  Time    : 2025-10-28 08:28:59 PM
-  Text    : Hi kesar3206, I'm sorry but it looks like there may have been a typo in your search. Could you please provide more information about what you're looking for so I can assist you better? Thank you!
-  Admin   : shamraz
+  Chat ID : b0E2BV8II4kAqyris6fm
+  Time    : 2025-10-29 05:32:09 PM
+  Text    : Hello, Thank you for reaching out to Team Aahaas. We have initiated your refund today and you will receive it to your account by Friday. We are extremely sorry for the inconvenience and the delay.
+
+Thank you.
+
+  Admin   : Alesha.H
