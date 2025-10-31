@@ -1,28 +1,26 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-10-29
+🔍 RESPONSE TIME SUMMARY FOR 2025-10-30
 ============================================================
 
-📊 Total response pairs calculated: 51
-👥 Unique Customers: 18
+📊 Total response pairs calculated: 50
+👥 Unique Customers: 26
 
-📊 Response Time Stats for 2025-10-29:
-  📈 Total Responses: 51
-  🔺 Max Response Time: 7527.38 sec (125.46 min)
-  🔻 Min Response Time: 12.05 sec (0.20 min)
-  🧮 Avg Response Time: 211.36 sec (3.52 min)
+📊 Response Time Stats for 2025-10-30:
+  📈 Total Responses: 50
+  🔺 Max Response Time: 1256.03 sec (20.93 min)
+  🔻 Min Response Time: 0.58 sec (0.01 min)
+  🧮 Avg Response Time: 86.69 sec (1.44 min)
 
-👤 Max Time Customer ID: cd0VfPfyIVeQaHXUSM1G
+👤 Max Time Customer ID: MK64yYeOz3rj0QwrdTjt
 📨 Customer Message:
-  Chat ID : ae53YMisWYgI8av4LrAE
-  UID     : 10918838
-  Time    : 2025-10-29 03:26:42 PM
-  Text    : Any update on the refund? Cuz it's been 18 days already. You informed me it will only take 4-7 days
+  Chat ID : ZljXlDQavqVXcZ2o98qk
+  UID     : 1553
+  Time    : 2025-10-30 03:08:57 PM
+  Text    : Please Share Email Id 
 
 ✅ Admin Response:
-  Chat ID : b0E2BV8II4kAqyris6fm
-  Time    : 2025-10-29 05:32:09 PM
-  Text    : Hello, Thank you for reaching out to Team Aahaas. We have initiated your refund today and you will receive it to your account by Friday. We are extremely sorry for the inconvenience and the delay.
+  Chat ID : KPUaSuJtZvLDwNByzAXd
+  Time    : 2025-10-30 03:29:53 PM
+  Text    : Is it regarding a inquiry or products in the App? If it is regards to products in the App kindly send to info@aahaas.com or else send or if its regards to a B2B inquiry send to beteam@aahaas.com
 
-Thank you.
-
-  Admin   : Alesha.H
+  Admin   : Dishmi
