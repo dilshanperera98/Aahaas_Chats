@@ -1,26 +1,25 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-10-30
+🔍 RESPONSE TIME SUMMARY FOR 2025-10-31
 ============================================================
 
-📊 Total response pairs calculated: 50
-👥 Unique Customers: 26
+📊 Total response pairs calculated: 30
+👥 Unique Customers: 19
 
-📊 Response Time Stats for 2025-10-30:
-  📈 Total Responses: 50
-  🔺 Max Response Time: 1256.03 sec (20.93 min)
-  🔻 Min Response Time: 0.58 sec (0.01 min)
-  🧮 Avg Response Time: 86.69 sec (1.44 min)
+📊 Response Time Stats for 2025-10-31:
+  📈 Total Responses: 30
+  🔺 Max Response Time: 1940.30 sec (32.34 min)
+  🔻 Min Response Time: 12.29 sec (0.20 min)
+  🧮 Avg Response Time: 279.04 sec (4.65 min)
 
-👤 Max Time Customer ID: MK64yYeOz3rj0QwrdTjt
+👤 Max Time Customer ID: yzbQWh41EM00cYifExXA
 📨 Customer Message:
-  Chat ID : ZljXlDQavqVXcZ2o98qk
-  UID     : 1553
-  Time    : 2025-10-30 03:08:57 PM
-  Text    : Please Share Email Id 
+  Chat ID : mhr23nxwwgz7qH42oc8E
+  UID     : 10919802
+  Time    : 2025-10-31 07:59:07 PM
+  Text    : Hi, I was searching for "Colo" but couldn't find any results. Can you help me find what I'm looking for?
 
 ✅ Admin Response:
-  Chat ID : KPUaSuJtZvLDwNByzAXd
-  Time    : 2025-10-30 03:29:53 PM
-  Text    : Is it regarding a inquiry or products in the App? If it is regards to products in the App kindly send to info@aahaas.com or else send or if its regards to a B2B inquiry send to beteam@aahaas.com
-
-  Admin   : Dishmi
+  Chat ID : 3YyzSIDR1pyop1z6AJfA
+  Time    : 2025-10-31 08:31:27 PM
+  Text    : Hi there! I'm sorry you couldn't find what you were looking for. Can you provide me with more details about your search so I can assist you better? Thank you!
+  Admin   : shahil

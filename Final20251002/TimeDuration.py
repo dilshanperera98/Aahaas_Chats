@@ -6,7 +6,7 @@ import os
 #file_path = os.path.expanduser("~/Desktop/firebase_path/customer_wise_chat_export_2025-10-07.xlsx")
 #output_txt_path = os.path.expanduser("~/Desktop/firebase_path/response_time_summary.txt")
 
-file_path = os.path.expanduser("~/Desktop/Chat_Report/Final20251002/exports/customer_wise_chat_export_2025-10-30.xlsx")
+file_path = os.path.expanduser("~/Desktop/Chat_Report/Final20251002/exports/customer_wise_chat_export_2025-10-31.xlsx")
 output_txt_path = os.path.expanduser("~/Desktop/Chat_Report/Final20251002/exports/response_time_summary.txt")
 
 # ------------------ Load the Excel File ------------------
