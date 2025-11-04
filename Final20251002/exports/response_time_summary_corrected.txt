@@ -1,25 +1,25 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-10-31
+🔍 RESPONSE TIME SUMMARY FOR 2025-11-02
 ============================================================
 
-📊 Total response pairs calculated: 30
-👥 Unique Customers: 19
+📊 Total response pairs calculated: 51
+👥 Unique Customers: 28
 
-📊 Response Time Stats for 2025-10-31:
-  📈 Total Responses: 30
-  🔺 Max Response Time: 1940.30 sec (32.34 min)
-  🔻 Min Response Time: 12.29 sec (0.20 min)
-  🧮 Avg Response Time: 279.04 sec (4.65 min)
+📊 Response Time Stats for 2025-11-02:
+  📈 Total Responses: 51
+  🔺 Max Response Time: 5465.32 sec (91.09 min)
+  🔻 Min Response Time: 68.92 sec (1.15 min)
+  🧮 Avg Response Time: 913.86 sec (15.23 min)
 
-👤 Max Time Customer ID: yzbQWh41EM00cYifExXA
+👤 Max Time Customer ID: w5jYRlU2Ht6iGJ4VbDYR
 📨 Customer Message:
-  Chat ID : mhr23nxwwgz7qH42oc8E
-  UID     : 10919802
-  Time    : 2025-10-31 07:59:07 PM
-  Text    : Hi, I was searching for "Colo" but couldn't find any results. Can you help me find what I'm looking for?
+  Chat ID : Qs4K7BqbUnLg4IDHUVDH
+  UID     : 10919693
+  Time    : 2025-11-02 12:17:39 PM
+  Text    : Hi, I was searching for "Yiwu" but couldn't find any results. Can you help me find what I'm looking for?
 
 ✅ Admin Response:
-  Chat ID : 3YyzSIDR1pyop1z6AJfA
-  Time    : 2025-10-31 08:31:27 PM
-  Text    : Hi there! I'm sorry you couldn't find what you were looking for. Can you provide me with more details about your search so I can assist you better? Thank you!
-  Admin   : shahil
+  Chat ID : Hw6UhmVfwxcLLxadQ5sa
+  Time    : 2025-11-02 01:48:44 PM
+  Text    : Hi Afnan! I'm sorry that you couldn't find what you were looking for. Can you please provide me with more details so I can assist you better? Thank you!
+  Admin   : shamraz
