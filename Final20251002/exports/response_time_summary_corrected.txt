@@ -1,25 +1,25 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-11-05
+🔍 RESPONSE TIME SUMMARY FOR 2025-11-06
 ============================================================
 
-📊 Total response pairs calculated: 96
-👥 Unique Customers: 49
+📊 Total response pairs calculated: 89
+👥 Unique Customers: 38
 
-📊 Response Time Stats for 2025-11-05:
-  📈 Total Responses: 96
-  🔺 Max Response Time: 690.81 sec (11.51 min)
-  🔻 Min Response Time: 5.25 sec (0.09 min)
-  🧮 Avg Response Time: 110.34 sec (1.84 min)
+📊 Response Time Stats for 2025-11-06:
+  📈 Total Responses: 89
+  🔺 Max Response Time: 1673.63 sec (27.89 min)
+  🔻 Min Response Time: 31.28 sec (0.52 min)
+  🧮 Avg Response Time: 222.81 sec (3.71 min)
 
-👤 Max Time Customer ID: UmwfD9seyE2r6W0pMPpg
+👤 Max Time Customer ID: QpxMzhjlvGCyJxRBezPs
 📨 Customer Message:
-  Chat ID : CJGY7fjTBdxvJis0K7XQ
-  UID     : 10910239
-  Time    : 2025-11-05 03:28:30 PM
-  Text    : Hi, I was searching for "Buf" but couldn't find any results. Can you help me find what I'm looking for?
+  Chat ID : 63R9kJcfEMguKVAV2U2Q
+  UID     : 10914510
+  Time    : 2025-11-06 10:11:52 PM
+  Text    : Hi, I was searching for "Hambanthota" but couldn't find any results. Can you help me find what I'm looking for?
 
 ✅ Admin Response:
-  Chat ID : mHMY8RbhMqp0KJanEnE8
-  Time    : 2025-11-05 03:40:01 PM
-  Text    : Hi there! I'm sorry, but I couldn't find any information on "Buf." Can you please provide me with more details so I can assist you better?
-  Admin   : Alesha.H
+  Chat ID : j33omeLfTQCrsXmJtDeP
+  Time    : 2025-11-06 10:39:45 PM
+  Text    : Hi induw1586! Thank you for reaching out. I apologize for any inconvenience. Hambantota is a beautiful city in Sri Lanka known for its stunning beaches and wildlife sanctuaries. How can I assist you with your travel plans to Hambantota?
+  Admin   : shahil
