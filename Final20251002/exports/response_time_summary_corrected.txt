@@ -1,25 +1,25 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-11-04
+🔍 RESPONSE TIME SUMMARY FOR 2025-11-05
 ============================================================
 
-📊 Total response pairs calculated: 81
-👥 Unique Customers: 41
+📊 Total response pairs calculated: 96
+👥 Unique Customers: 49
 
-📊 Response Time Stats for 2025-11-04:
-  📈 Total Responses: 81
-  🔺 Max Response Time: 1780.00 sec (29.67 min)
-  🔻 Min Response Time: 4.69 sec (0.08 min)
-  🧮 Avg Response Time: 174.25 sec (2.90 min)
+📊 Response Time Stats for 2025-11-05:
+  📈 Total Responses: 96
+  🔺 Max Response Time: 690.81 sec (11.51 min)
+  🔻 Min Response Time: 5.25 sec (0.09 min)
+  🧮 Avg Response Time: 110.34 sec (1.84 min)
 
-👤 Max Time Customer ID: TB9IyjSeszoPTb3cErff
+👤 Max Time Customer ID: UmwfD9seyE2r6W0pMPpg
 📨 Customer Message:
-  Chat ID : AawqPIl11vUFY8KIlzgK
-  UID     : 10919862
-  Time    : 2025-11-04 12:57:54 AM
-  Text    : Hi, I was searching for "Kashi" but couldn't find any results. Can you help me find what I'm looking for?
+  Chat ID : CJGY7fjTBdxvJis0K7XQ
+  UID     : 10910239
+  Time    : 2025-11-05 03:28:30 PM
+  Text    : Hi, I was searching for "Buf" but couldn't find any results. Can you help me find what I'm looking for?
 
 ✅ Admin Response:
-  Chat ID : VoYlqSdNWGa15fEpym2y
-  Time    : 2025-11-04 01:27:34 AM
-  Text    : Hi Soe, I'm sorry that you couldn't find what you were looking for. Can you please provide me with more information about the specific "Kashi" you are referring to so that I can assist you better? Thank you!
-  Admin   : shamraz
+  Chat ID : mHMY8RbhMqp0KJanEnE8
+  Time    : 2025-11-05 03:40:01 PM
+  Text    : Hi there! I'm sorry, but I couldn't find any information on "Buf." Can you please provide me with more details so I can assist you better?
+  Admin   : Alesha.H
