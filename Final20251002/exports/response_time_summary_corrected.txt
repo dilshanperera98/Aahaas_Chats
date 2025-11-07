@@ -1,25 +1,25 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-11-03
+🔍 RESPONSE TIME SUMMARY FOR 2025-11-04
 ============================================================
 
-📊 Total response pairs calculated: 41
-👥 Unique Customers: 22
+📊 Total response pairs calculated: 81
+👥 Unique Customers: 41
 
-📊 Response Time Stats for 2025-11-03:
-  📈 Total Responses: 41
-  🔺 Max Response Time: 814.21 sec (13.57 min)
-  🔻 Min Response Time: 7.35 sec (0.12 min)
-  🧮 Avg Response Time: 139.81 sec (2.33 min)
+📊 Response Time Stats for 2025-11-04:
+  📈 Total Responses: 81
+  🔺 Max Response Time: 1780.00 sec (29.67 min)
+  🔻 Min Response Time: 4.69 sec (0.08 min)
+  🧮 Avg Response Time: 174.25 sec (2.90 min)
 
-👤 Max Time Customer ID: UUMJtqmmuAd0XGJm4iiK
+👤 Max Time Customer ID: TB9IyjSeszoPTb3cErff
 📨 Customer Message:
-  Chat ID : E3k4BwvJxd1vJRgdznb0
-  UID     : 10919165
-  Time    : 2025-11-03 05:18:38 PM
-  Text    : Hi, I was searching for "Swimming" but couldn't find any results. Can you help me find what I'm looking for?
+  Chat ID : AawqPIl11vUFY8KIlzgK
+  UID     : 10919862
+  Time    : 2025-11-04 12:57:54 AM
+  Text    : Hi, I was searching for "Kashi" but couldn't find any results. Can you help me find what I'm looking for?
 
 ✅ Admin Response:
-  Chat ID : Ix9PHHy7eKduS95qwdHT
-  Time    : 2025-11-03 05:32:13 PM
-  Text    :  Hi rasan9333, I apologize for the inconvenience. It seems like there may have been a misunderstanding in your search. I can definitely help you find information on swimming activities. Could you please provide me with more details such as your location or any specific preferences you have? Let's make sure we find exactly what you're looking for.
-  Admin   : Ramiru
+  Chat ID : VoYlqSdNWGa15fEpym2y
+  Time    : 2025-11-04 01:27:34 AM
+  Text    : Hi Soe, I'm sorry that you couldn't find what you were looking for. Can you please provide me with more information about the specific "Kashi" you are referring to so that I can assist you better? Thank you!
+  Admin   : shamraz
