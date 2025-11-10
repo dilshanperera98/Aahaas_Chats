@@ -1,26 +1,25 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-11-07
+🔍 RESPONSE TIME SUMMARY FOR 2025-11-08
 ============================================================
 
-📊 Total response pairs calculated: 125
-👥 Unique Customers: 45
+📊 Total response pairs calculated: 73
+👥 Unique Customers: 33
 
-📊 Response Time Stats for 2025-11-07:
-  📈 Total Responses: 125
-  🔺 Max Response Time: 586.61 sec (9.78 min)
-  🔻 Min Response Time: 3.23 sec (0.05 min)
-  🧮 Avg Response Time: 76.35 sec (1.27 min)
+📊 Response Time Stats for 2025-11-08:
+  📈 Total Responses: 73
+  🔺 Max Response Time: 277.48 sec (4.62 min)
+  🔻 Min Response Time: 2.39 sec (0.04 min)
+  🧮 Avg Response Time: 94.00 sec (1.57 min)
 
-👤 Max Time Customer ID: LWHdLn57bXUv3Cvq44UX
+👤 Max Time Customer ID: kAJEmqzSKbHY0TcmKbif
 📨 Customer Message:
-  Chat ID : yuVABwsK9NJnBA6Y32LO
-  UID     : 10919968
-  Time    : 2025-11-07 05:08:17 AM
-  Text    : Hi, I was searching for "Ltuso" but couldn't find any results. Can you help me find what I'm looking for?
+  Chat ID : 8hI6Dqj1oPjkzaxm7g0w
+  UID     : 10911231
+  Time    : 2025-11-08 10:14:51 PM
+  Text    : Hi, I was searching for "Sof" but couldn't find any results. Can you help me find what I'm looking for?
 
 ✅ Admin Response:
-  Chat ID : yJLUStwbvaaSSnphAb4P
-  Time    : 2025-11-07 05:18:03 AM
-  Text    : Hi Egodahage, I'm sorry that you couldn't find what you were looking for. Can you provide me with more details so I can assist you better? Thank you!
-
-  Admin   : shahil
+  Chat ID : g8XkkUrN2VwO0Iayu6jR
+  Time    : 2025-11-08 10:19:28 PM
+  Text    : Hi Divyana! I'm sorry that you couldn't find what you were looking for. Can you please provide me with more details about "Sof" so I can assist you better? Thank you!
+  Admin   : shamraz
