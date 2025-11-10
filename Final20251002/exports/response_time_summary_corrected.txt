@@ -1,25 +1,26 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-11-08
+🔍 RESPONSE TIME SUMMARY FOR 2025-11-09
 ============================================================
 
-📊 Total response pairs calculated: 73
-👥 Unique Customers: 33
+📊 Total response pairs calculated: 62
+👥 Unique Customers: 27
 
-📊 Response Time Stats for 2025-11-08:
-  📈 Total Responses: 73
-  🔺 Max Response Time: 277.48 sec (4.62 min)
-  🔻 Min Response Time: 2.39 sec (0.04 min)
-  🧮 Avg Response Time: 94.00 sec (1.57 min)
+📊 Response Time Stats for 2025-11-09:
+  📈 Total Responses: 62
+  🔺 Max Response Time: 4405.55 sec (73.43 min)
+  🔻 Min Response Time: 2.01 sec (0.03 min)
+  🧮 Avg Response Time: 367.24 sec (6.12 min)
 
-👤 Max Time Customer ID: kAJEmqzSKbHY0TcmKbif
+👤 Max Time Customer ID: dbaoUolZVQjag2Mz0BcP
 📨 Customer Message:
-  Chat ID : 8hI6Dqj1oPjkzaxm7g0w
-  UID     : 10911231
-  Time    : 2025-11-08 10:14:51 PM
-  Text    : Hi, I was searching for "Sof" but couldn't find any results. Can you help me find what I'm looking for?
+  Chat ID : tpLaAa7dOtJdwrK0Ha4W
+  UID     : 10919907
+  Time    : 2025-11-09 09:13:24 AM
+  Text    : Hi, I was searching for "Thai" but couldn't find any results. Can you help me find what I'm looking for?
 
 ✅ Admin Response:
-  Chat ID : g8XkkUrN2VwO0Iayu6jR
-  Time    : 2025-11-08 10:19:28 PM
-  Text    : Hi Divyana! I'm sorry that you couldn't find what you were looking for. Can you please provide me with more details about "Sof" so I can assist you better? Thank you!
-  Admin   : shamraz
+  Chat ID : VnW71Pbh9jfYDrPgIEJp
+  Time    : 2025-11-09 10:26:50 AM
+  Text    : 
+ Hi Ishara Shalinda Jayalath, I apologize for the inconvenience. Can you please provide me with more details about what you are looking for so I can assist you better? Thank you for your patience.
+  Admin   : Dishmi
