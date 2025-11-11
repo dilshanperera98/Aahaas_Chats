@@ -1,26 +1,25 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-11-09
+🔍 RESPONSE TIME SUMMARY FOR 2025-11-10
 ============================================================
 
 📊 Total response pairs calculated: 62
-👥 Unique Customers: 27
+👥 Unique Customers: 32
 
-📊 Response Time Stats for 2025-11-09:
+📊 Response Time Stats for 2025-11-10:
   📈 Total Responses: 62
-  🔺 Max Response Time: 4405.55 sec (73.43 min)
-  🔻 Min Response Time: 2.01 sec (0.03 min)
-  🧮 Avg Response Time: 367.24 sec (6.12 min)
+  🔺 Max Response Time: 789.32 sec (13.16 min)
+  🔻 Min Response Time: 1.65 sec (0.03 min)
+  🧮 Avg Response Time: 69.40 sec (1.16 min)
 
-👤 Max Time Customer ID: dbaoUolZVQjag2Mz0BcP
+👤 Max Time Customer ID: soOVMgHrGUkk1pcRAHF6
 📨 Customer Message:
-  Chat ID : tpLaAa7dOtJdwrK0Ha4W
-  UID     : 10919907
-  Time    : 2025-11-09 09:13:24 AM
-  Text    : Hi, I was searching for "Thai" but couldn't find any results. Can you help me find what I'm looking for?
+  Chat ID : HKz6KVtt08rIsLm70gg3
+  UID     : 10914737
+  Time    : 2025-11-10 10:02:29 PM
+  Text    : Hi, I was searching for "Q" but couldn't find any results. Can you help me find what I'm looking for?
 
 ✅ Admin Response:
-  Chat ID : VnW71Pbh9jfYDrPgIEJp
-  Time    : 2025-11-09 10:26:50 AM
-  Text    : 
- Hi Ishara Shalinda Jayalath, I apologize for the inconvenience. Can you please provide me with more details about what you are looking for so I can assist you better? Thank you for your patience.
-  Admin   : Dishmi
+  Chat ID : InhGIWfI8XlyvtDFzefC
+  Time    : 2025-11-10 10:15:38 PM
+  Text    : Hi Panda, I'm sorry we couldn't find any results for "Q". Could you please provide me with more details or specific keywords so I can assist you better? Thank you!
+  Admin   : shamraz
