@@ -1,25 +1,25 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-11-10
+🔍 RESPONSE TIME SUMMARY FOR 2025-11-11
 ============================================================
 
-📊 Total response pairs calculated: 62
-👥 Unique Customers: 32
+📊 Total response pairs calculated: 68
+👥 Unique Customers: 28
 
-📊 Response Time Stats for 2025-11-10:
-  📈 Total Responses: 62
-  🔺 Max Response Time: 789.32 sec (13.16 min)
-  🔻 Min Response Time: 1.65 sec (0.03 min)
-  🧮 Avg Response Time: 69.40 sec (1.16 min)
+📊 Response Time Stats for 2025-11-11:
+  📈 Total Responses: 68
+  🔺 Max Response Time: 1582.26 sec (26.37 min)
+  🔻 Min Response Time: 8.20 sec (0.14 min)
+  🧮 Avg Response Time: 174.93 sec (2.92 min)
 
-👤 Max Time Customer ID: soOVMgHrGUkk1pcRAHF6
+👤 Max Time Customer ID: tGSlHWRjoKfQd0qxztcl
 📨 Customer Message:
-  Chat ID : HKz6KVtt08rIsLm70gg3
-  UID     : 10914737
-  Time    : 2025-11-10 10:02:29 PM
-  Text    : Hi, I was searching for "Q" but couldn't find any results. Can you help me find what I'm looking for?
+  Chat ID : f46WmXcjmW8Eh5WliDmg
+  UID     : 10920090
+  Time    : 2025-11-11 04:55:29 PM
+  Text    : Hi, I was searching for "Hil" but couldn't find any results. Can you help me find what I'm looking for?
 
 ✅ Admin Response:
-  Chat ID : InhGIWfI8XlyvtDFzefC
-  Time    : 2025-11-10 10:15:38 PM
-  Text    : Hi Panda, I'm sorry we couldn't find any results for "Q". Could you please provide me with more details or specific keywords so I can assist you better? Thank you!
-  Admin   : shamraz
+  Chat ID : d7C7Zx8FH7OiVgHSFaZr
+  Time    : 2025-11-11 05:21:51 PM
+  Text    : Hi Christina, I'm sorry you couldn't find what you were looking for. Can you please provide me with more details so I can assist you better? Thank you!
+  Admin   : Alesha.H
