@@ -15,7 +15,7 @@ try:
 except Exception as e:
     print(f"❌ Error loading Excel file: {e}")
     exit()
-
+ 
 # Ensure 'createdAt' is in datetime format
 df['createdAt'] = pd.to_datetime(df['createdAt'], errors='coerce')
 
