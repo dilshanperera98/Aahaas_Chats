@@ -1,25 +1,25 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-11-11
+🔍 RESPONSE TIME SUMMARY FOR 2025-11-16
 ============================================================
 
-📊 Total response pairs calculated: 68
-👥 Unique Customers: 28
+📊 Total response pairs calculated: 39
+👥 Unique Customers: 24
 
-📊 Response Time Stats for 2025-11-11:
-  📈 Total Responses: 68
-  🔺 Max Response Time: 1582.26 sec (26.37 min)
-  🔻 Min Response Time: 8.20 sec (0.14 min)
-  🧮 Avg Response Time: 174.93 sec (2.92 min)
+📊 Response Time Stats for 2025-11-16:
+  📈 Total Responses: 39
+  🔺 Max Response Time: 857.78 sec (14.30 min)
+  🔻 Min Response Time: 0.19 sec (0.00 min)
+  🧮 Avg Response Time: 95.50 sec (1.59 min)
 
-👤 Max Time Customer ID: tGSlHWRjoKfQd0qxztcl
+👤 Max Time Customer ID: bkWjaj24Nsm9rd2Se18o
 📨 Customer Message:
-  Chat ID : f46WmXcjmW8Eh5WliDmg
-  UID     : 10920090
-  Time    : 2025-11-11 04:55:29 PM
-  Text    : Hi, I was searching for "Hil" but couldn't find any results. Can you help me find what I'm looking for?
+  Chat ID : oTR0Mq4SKMk8L9NstEhk
+  UID     : 10920104
+  Time    : 2025-11-16 12:07:14 PM
+  Text    : Hi, I was searching for "Uawad" but couldn't find any results. Can you help me find what I'm looking for?
 
 ✅ Admin Response:
-  Chat ID : d7C7Zx8FH7OiVgHSFaZr
-  Time    : 2025-11-11 05:21:51 PM
-  Text    : Hi Christina, I'm sorry you couldn't find what you were looking for. Can you please provide me with more details so I can assist you better? Thank you!
-  Admin   : Alesha.H
+  Chat ID : 2xT8UGiV6t5GIJKbXh20
+  Time    : 2025-11-16 12:21:31 PM
+  Text    : Hi Niranga, I apologize for the inconvenience. It seems like there may have been a spelling error in your search. Could you please provide more details about what you are looking for in Udawalawe? I'll do my best to assist you in finding the information you need. Thank you for reaching out.
+  Admin   : Dishmi
