@@ -1,25 +1,26 @@
 ============================================================
-🔍 RESPONSE TIME SUMMARY FOR 2025-11-16
+🔍 RESPONSE TIME SUMMARY FOR 2025-11-17
 ============================================================
 
-📊 Total response pairs calculated: 39
-👥 Unique Customers: 24
+📊 Total response pairs calculated: 32
+👥 Unique Customers: 16
 
-📊 Response Time Stats for 2025-11-16:
-  📈 Total Responses: 39
-  🔺 Max Response Time: 857.78 sec (14.30 min)
-  🔻 Min Response Time: 0.19 sec (0.00 min)
-  🧮 Avg Response Time: 95.50 sec (1.59 min)
+📊 Response Time Stats for 2025-11-17:
+  📈 Total Responses: 32
+  🔺 Max Response Time: 37.08 sec (0.62 min)
+  🔻 Min Response Time: 1.09 sec (0.02 min)
+  🧮 Avg Response Time: 11.47 sec (0.19 min)
 
-👤 Max Time Customer ID: bkWjaj24Nsm9rd2Se18o
+👤 Max Time Customer ID: 0CyT4RBtQnZTSCE62mOl
 📨 Customer Message:
-  Chat ID : oTR0Mq4SKMk8L9NstEhk
-  UID     : 10920104
-  Time    : 2025-11-16 12:07:14 PM
-  Text    : Hi, I was searching for "Uawad" but couldn't find any results. Can you help me find what I'm looking for?
+  Chat ID : UewPtcpmY8BlJ6DwAP27
+  UID     : 10917657
+  Time    : 2025-11-17 07:05:19 PM
+  Text    : Can I get contact no.
 
 ✅ Admin Response:
-  Chat ID : 2xT8UGiV6t5GIJKbXh20
-  Time    : 2025-11-16 12:21:31 PM
-  Text    : Hi Niranga, I apologize for the inconvenience. It seems like there may have been a spelling error in your search. Could you please provide more details about what you are looking for in Udawalawe? I'll do my best to assist you in finding the information you need. Thank you for reaching out.
-  Admin   : Dishmi
+  Chat ID : dmkMbZlkM0uqI3jNGdpG
+  Time    : 2025-11-17 07:05:56 PM
+  Text    : +94711744227 Team Aahaas
+
+  Admin   : Ramiru
